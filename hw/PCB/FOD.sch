@@ -1,5 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:Femtosat-cache
+LIBS:FOD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -474,57 +474,6 @@ Wire Wire Line
 Wire Wire Line
 	4900 5150 4900 5250
 $Comp
-L GPS:XA1110 U3
-U 1 1 5BD2F968
-P 7600 4700
-F 0 "U3" H 7600 5050 60  0000 C CNN
-F 1 "XA1110" H 7600 4350 60  0000 C CNN
-F 2 "GPS:XA1110" H 7300 4650 60  0001 C CNN
-F 3 "" H 7300 4650 60  0001 C CNN
-	1    7600 4700
-	1    0    0    -1  
-$EndComp
-Text Label 6750 4500 0    50   ~ 0
-GPS_INT
-Wire Wire Line
-	7100 4500 6750 4500
-Wire Wire Line
-	6750 4600 7100 4600
-Wire Wire Line
-	7100 4700 6750 4700
-Text Label 6750 4600 0    50   ~ 0
-GND
-Text Label 6750 4700 0    50   ~ 0
-3V3
-Text Label 6750 4800 0    50   ~ 0
-SDA
-Text Label 6750 4900 0    50   ~ 0
-SCL
-Wire Wire Line
-	7100 4800 6750 4800
-Wire Wire Line
-	6750 4900 7100 4900
-Text Label 8450 4500 2    50   ~ 0
-GPS_WK
-Text Label 8450 4600 2    50   ~ 0
-GPS_RST
-Text Label 8450 4700 2    50   ~ 0
-GPS_PPS
-Text Label 8450 4800 2    50   ~ 0
-TX
-Text Label 8450 4900 2    50   ~ 0
-RX
-Wire Wire Line
-	8450 4500 8100 4500
-Wire Wire Line
-	8100 4600 8450 4600
-Wire Wire Line
-	8450 4700 8100 4700
-Wire Wire Line
-	8100 4800 8450 4800
-Wire Wire Line
-	8450 4900 8100 4900
-$Comp
 L Connector:Conn_01x03_Male J2
 U 1 1 5BD799EE
 P 7600 2100
@@ -539,44 +488,4 @@ Text Label 7150 2200 0    50   ~ 0
 RESET
 Wire Wire Line
 	7150 2200 7400 2200
-$Comp
-L GPS:TRH-G2 U2
-U 1 1 5BD83F9A
-P 7550 3350
-F 0 "U2" H 7550 3700 50  0000 C CNN
-F 1 "TRH-G2" H 7800 3050 50  0000 C CNN
-F 2 "GPS:TRH-G2" H 7650 3350 50  0001 C CNN
-F 3 "" H 7650 3350 50  0001 C CNN
-	1    7550 3350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7550 3700 7550 3750
-$Comp
-L power:GND #PWR0111
-U 1 1 5BD888B5
-P 7550 3750
-F 0 "#PWR0111" H 7550 3500 50  0001 C CNN
-F 1 "GND" H 7555 3577 50  0000 C CNN
-F 2 "" H 7550 3750 50  0001 C CNN
-F 3 "" H 7550 3750 50  0001 C CNN
-	1    7550 3750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8050 3450 8200 3450
-Text Label 6700 3150 0    50   ~ 0
-5V0
-Text Label 6700 3250 0    50   ~ 0
-GPS_RST
-Text Label 6700 3450 0    50   ~ 0
-TX
-Text Label 8200 3450 2    50   ~ 0
-RX
-Wire Wire Line
-	6700 3150 7050 3150
-Wire Wire Line
-	6700 3250 7050 3250
-Wire Wire Line
-	6700 3450 7050 3450
 $EndSCHEMATC

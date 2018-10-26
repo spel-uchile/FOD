@@ -1,4 +1,4 @@
-update=jue 25 oct 2018 16:25:24 -03
+update=vie 26 oct 2018 11:47:12 -03
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Femtosat.net
+LastNetListRead=FOD.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
