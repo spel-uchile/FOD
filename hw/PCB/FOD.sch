@@ -532,9 +532,40 @@ Wire Wire Line
 Text Label 4750 1600 0    50   ~ 0
 GND
 $Sheet
-S 5900 5050 900  550 
+S 5900 5050 600  500 
 U 5BEF8C81
 F0 "Deploy" 50
 F1 "dpl.sch" 50
+F2 "DPL_EN" I L 5900 5250 50 
+F3 "DPL_SIG" I L 5900 5350 50 
+F4 "GND" I L 5900 5450 50 
+F5 "5V0" I L 5900 5150 50 
 $EndSheet
+Text Label 5550 5250 0    50   ~ 0
+DPL_EN
+Text Label 5550 5350 0    50   ~ 0
+DPL_SIG
+Text Label 5550 5150 0    50   ~ 0
+5V0
+Wire Wire Line
+	5900 5150 5550 5150
+Wire Wire Line
+	5550 5250 5900 5250
+Wire Wire Line
+	5900 5350 5550 5350
+$Comp
+L power:GND #PWR?
+U 1 1 5BEB2B09
+P 5800 5600
+F 0 "#PWR?" H 5800 5350 50  0001 C CNN
+F 1 "GND" H 5805 5427 50  0000 C CNN
+F 2 "" H 5800 5600 50  0001 C CNN
+F 3 "" H 5800 5600 50  0001 C CNN
+	1    5800 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 5450 5800 5450
+Wire Wire Line
+	5800 5450 5800 5600
 $EndSCHEMATC
