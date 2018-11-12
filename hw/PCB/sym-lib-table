@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name Payload)(type Legacy)(uri ${KIPRJMOD}/lib/Payload/Payload.lib)(options "")(descr ""))
+  (lib (name H-Bridge)(type Legacy)(uri ${KIPRJMOD}/lib/H-Bridge/H-Bridge.lib)(options "")(descr ""))
+)
