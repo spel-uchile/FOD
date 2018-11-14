@@ -1,4 +1,4 @@
-15350992888033592
+15360114918482592
 Antenna
 SMA
 
@@ -39977,6 +39977,13 @@ DCDC-Converter TRACO TSR-1
 3
 3
 Converter_DCDC
+Converter_DCDC_XP_POWER-ISU02_SMD
+DCDC-Converter, XP POWER, ISU02 Series, 2W Single and Dual Output, 1500VDC Isolation, 19.0x17.0x8.7mm https://www.xppower.com/Portals/0/pdfs/SF_ISU02.pdf
+DCDC SMD XP POWER ISU02
+0
+7
+7
+Converter_DCDC
 Converter_DCDC_XP_POWER_JTExxxxDxx_THT
 DCDC-Converter, XP POWER, Type JTE06 Series,  Dual Output
 DCDC-Converter XP_POWER JTE06 Dual
@@ -48586,6 +48593,13 @@ LED Cree XQ
 0
 2
 2
+LED_SMD
+LED_Inolux_IN-PI554FCH_PLCC4_5.0x5.0mm_P3.2mm
+http://www.inolux-corp.com/datasheet/SMDLED/Addressable%20LED/IN-PI554FCH.pdf
+RGB LED NeoPixel addressable
+0
+4
+4
 LED_SMD
 LED_Kingbright_AAA3528ESGCT
 Kingbright, dual LED, 3.5 x 2.8 mm Surface Mount LED Lamp (http://www.kingbrightusa.com/images/catalog/SPEC/AAA3528ESGCT.pdf)
@@ -60684,6 +60698,13 @@ TO-264-5 Vertical RM 3.81mm
 5
 Payload
 FOD
+
+
+0
+104
+104
+Payload
+PC104-Standard
 
 
 0
