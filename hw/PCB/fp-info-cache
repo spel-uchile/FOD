@@ -1,25 +1,4 @@
-15360115101554592
-Antenna
-SMA
-
-
-0
-5
-5
-Antenna
-SMA_SMD
-
-
-0
-5
-5
-Antenna
-U.FL-COAX
-
-
-0
-3
-3
+15357177734626054
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (http://www.bulgin.com/media/bulgin/data/Battery_holders.pdf)
@@ -62110,6 +62089,13 @@ Standex Meder SIL reed relais
 0
 4
 4
+Resistor_FOD
+RCL12257R15FKEG
+
+
+0
+2
+2
 Resistor_SMD
 R_0201_0603Metric
 Resistor SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
