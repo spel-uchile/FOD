@@ -137,8 +137,6 @@ Text Label 2850 4100 0    50   ~ 0
 SD_NSS
 Text Label 2850 4200 0    50   ~ 0
 SD_MISO
-Text Label 2850 3800 0    50   ~ 0
-PIN_5
 Text Label 2850 3700 0    50   ~ 0
 PIN_4
 Text Label 2850 3600 0    50   ~ 0
@@ -568,4 +566,6 @@ Wire Wire Line
 	5900 5450 5800 5450
 Wire Wire Line
 	5800 5450 5800 5600
+Text Label 2850 3800 0    50   ~ 0
+DPL_SIG
 $EndSCHEMATC
