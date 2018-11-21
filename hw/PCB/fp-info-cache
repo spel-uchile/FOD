@@ -1,4 +1,4 @@
-15077170596498237
+15088269971683210
 Antenna
 SMA
 
@@ -39739,6 +39739,13 @@ Vigortronix VTX-214-010-xxx serie of ACDC converter
 5
 5
 Converter_DCDC
+Converter_DCDC_Artesyn_ATA_SMD
+DCDC-Converter, Artesyn, ATA Series, 3W Single and Dual Output, 1500VDC Isolation, 24.0x13.7x8.0mm https://www.artesyn.com/power/assets/ata_series_ds_01apr2015_79c25814fd.pdf https://www.artesyn.com/power/assets/trn_dc-dc_ata_3w_series_releas1430412818_techref.pdf
+DCDC SMD
+0
+7
+7
+Converter_DCDC
 Converter_DCDC_Bothhand_CFUDxxxx_THT
 DCDC-Converter, BOTHHAND, Type CFxxxx-Serie,  (Very dodgy url but was the only at hand), 
 DCDC-Converter BOTHHAND Type CFxxxx-Serie
@@ -46777,6 +46784,20 @@ Inductor_THT
 L_Toroid_Vertical_L67.6mm_W36.1mm_P31.80mm_Vishay_TJ9
 L_Toroid, Vertical series, Radial, pin pitch=31.80mm, , length*width=67.6*36.1mm^2, Vishay, TJ9, http://www.vishay.com/docs/34079/tj.pdf
 L_Toroid Vertical series Radial pin pitch 31.80mm  length 67.6mm width 36.1mm Vishay TJ9
+0
+2
+2
+Interrupt
+AV4524
+
+
+0
+3
+3
+Interrupt
+AV4524_2PIN
+
+
 0
 2
 2
@@ -55889,7 +55910,7 @@ SOIC 1.27
 7
 Package_SO
 SOIC-8_3.9x4.9mm_P1.27mm
-8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification 00000049BS.pdf)
+8-Lead Plastic Small Outline (SN) - Narrow, 3.90 mm Body [SOIC] (see Microchip Packaging Specification http://ww1.microchip.com/downloads/en/PackagingSpec/00000049BQ.pdf)
 SOIC 1.27
 0
 8

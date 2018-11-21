@@ -20,7 +20,7 @@ U 1 1 5BEA29D2
 P 5650 3450
 F 0 "U3" H 5650 4065 50  0000 C CNN
 F 1 "SN754410" H 5650 3974 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm_LongPads" H 5500 3550 50  0001 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm" H 5500 3550 50  0001 C CNN
 F 3 "" H 5500 3550 50  0001 C CNN
 	1    5650 3450
 	1    0    0    -1  
@@ -39,7 +39,7 @@ $EndComp
 Wire Wire Line
 	6050 3100 6250 3100
 Text Label 6250 3100 2    50   ~ 0
-5V0
+VCC
 Text Label 4900 3200 0    50   ~ 0
 DPL_SIG
 Text Label 4900 3100 0    50   ~ 0
@@ -107,5 +107,46 @@ NoConn ~ 5250 3600
 NoConn ~ 5250 3700
 NoConn ~ 5250 3800
 Text HLabel 6250 3100 2    50   Input ~ 0
-5V0
+VCC
+$Comp
+L Device:R R4
+U 1 1 5BF60B18
+P 5150 4300
+F 0 "R4" H 5081 4254 50  0000 R CNN
+F 1 "1K" H 5081 4345 50  0000 R CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5080 4300 50  0001 C CNN
+F 3 "~" H 5150 4300 50  0001 C CNN
+	1    5150 4300
+	1    0    0    1   
+$EndComp
+Text Label 5250 4500 0    50   ~ 0
+DPL_STA
+Wire Wire Line
+	5250 4400 5550 4400
+Text Label 5250 4400 0    50   ~ 0
+GND
+Text Label 5000 4150 0    50   ~ 0
+VCC
+Wire Wire Line
+	5150 4150 5000 4150
+Wire Wire Line
+	5150 4500 5150 4450
+Wire Wire Line
+	5150 4500 5550 4500
+Wire Wire Line
+	5150 4500 5100 4500
+Connection ~ 5150 4500
+Text HLabel 5100 4500 0    50   Input ~ 0
+DPL_STA
+$Comp
+L Interrupter:AV4524_2PIN U5
+U 1 1 5BF65EF1
+P 5750 4500
+F 0 "U5" H 6028 4546 50  0000 L CNN
+F 1 "AV4524_2PIN" H 6028 4455 50  0000 L CNN
+F 2 "Interrupt:AV4524_2PIN" H 5700 4500 50  0001 C CNN
+F 3 "" H 5700 4500 50  0001 C CNN
+	1    5750 4500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

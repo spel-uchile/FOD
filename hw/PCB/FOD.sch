@@ -137,22 +137,14 @@ Text Label 2850 4100 0    50   ~ 0
 SD_NSS
 Text Label 2850 4200 0    50   ~ 0
 SD_MISO
-Text Label 2850 3700 0    50   ~ 0
-PIN_4
 Text Label 2850 3600 0    50   ~ 0
 GND
 Text Label 2850 3500 0    50   ~ 0
 3V3
-Text Label 2850 3400 0    50   ~ 0
-PIN_3
-Text Label 2850 3300 0    50   ~ 0
-PIN_2
 Text Label 2850 3200 0    50   ~ 0
 SCL
 Text Label 2850 3100 0    50   ~ 0
 SDA
-Text Label 2850 3000 0    50   ~ 0
-A6
 Text Label 2850 2900 0    50   ~ 0
 A5
 Text Label 2850 2800 0    50   ~ 0
@@ -537,14 +529,14 @@ F1 "dpl.sch" 50
 F2 "DPL_EN" I L 5900 5250 50 
 F3 "DPL_SIG" I L 5900 5350 50 
 F4 "GND" I L 5900 5450 50 
-F5 "5V0" I L 5900 5150 50 
+F5 "VCC" I L 5900 5150 50 
 $EndSheet
 Text Label 5550 5250 0    50   ~ 0
 DPL_EN
 Text Label 5550 5350 0    50   ~ 0
 DPL_SIG
 Text Label 5550 5150 0    50   ~ 0
-5V0
+3V3
 Wire Wire Line
 	5900 5150 5550 5150
 Wire Wire Line
@@ -566,6 +558,14 @@ Wire Wire Line
 	5900 5450 5800 5450
 Wire Wire Line
 	5800 5450 5800 5600
-Text Label 2850 3800 0    50   ~ 0
+Text Label 2850 3700 0    50   ~ 0
 DPL_SIG
+Text Label 2850 3800 0    50   ~ 0
+DPL_EN
+Text Label 2850 3300 0    50   ~ 0
+TRX_NSS
+Text Label 2850 3400 0    50   ~ 0
+TRX_RST
+Text Label 2850 3000 0    50   ~ 0
+TRX_INT
 $EndSCHEMATC
