@@ -6,7 +6,7 @@
 
 #include "radio.h"
 #include "gps.h"
-#include "femto_pins.h"
+#include "fod_pins.h"
 
 #define CLIENT_ADDRESS 1
 #define SERVER_ADDRESS 2
@@ -23,10 +23,10 @@ uint8_t base_cmd;
 
 void setup() {
     // Initialize serial communication
-    Serial.begin(115200);
+    SerialUSB.begin(115200);
     delay(1800);
     // Init femto-satellite's systems
-    Serial.println("Init femto-satellite");
+    SerialUSB.println("Init FOD");
     gps.init();
     radio.init();
 }
