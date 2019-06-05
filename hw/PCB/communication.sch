@@ -1,4 +1,4 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 5
 LIBS:FOD-cache
 EELAYER 29 0
 EELAYER END
@@ -14,17 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L RF_AM_FM:RFM69HCW U4
-U 1 1 5BD13EFB
-P 5600 3550
-F 0 "U4" H 5250 4000 50  0000 C CNN
-F 1 "RFM69HCW" H 5800 4000 50  0000 C CNN
-F 2 "Transceptor:RFM69HCW" H 2300 5200 50  0001 C CNN
-F 3 "http://www.hoperf.com/upload/rf/RFM69HCW-V1.1.pdf" H 2300 5200 50  0001 C CNN
-	1    5600 3550
-	1    0    0    -1  
-$EndComp
 $Comp
 L antenna:SMA J3
 U 1 1 5BD153FD
@@ -227,6 +216,17 @@ F 1 "GND" H 7355 3327 50  0000 C CNN
 F 2 "" H 7350 3500 50  0001 C CNN
 F 3 "" H 7350 3500 50  0001 C CNN
 	1    7350 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L RF_Module:RFM69HCW U4
+U 1 1 5CF85C91
+P 5600 3550
+F 0 "U4" H 5300 4000 50  0000 C CNN
+F 1 "RFM69HCW" H 5800 4000 50  0000 C CNN
+F 2 "" H 2300 5200 50  0001 C CNN
+F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcb8284d838.pdf" H 2300 5200 50  0001 C CNN
+	1    5600 3550
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
