@@ -1,10 +1,9 @@
 EESchema Schematic File Version 5
-LIBS:FOD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 5
+Sheet 2 6
 Title ""
 Date ""
 Rev ""
@@ -37,10 +36,10 @@ F 3 "~" H 4350 3400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C5
+L Device:C C4
 U 1 1 5B635301
 P 5100 4800
-F 0 "C5" H 5215 4846 50  0000 L CNN
+F 0 "C4" H 5215 4846 50  0000 L CNN
 F 1 "1uF" H 5215 4755 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5138 4650 50  0001 C CNN
 F 3 "~" H 5100 4800 50  0001 C CNN
@@ -59,22 +58,11 @@ F 3 "~" H 4600 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C4
-U 1 1 5B635382
-P 4150 4800
-F 0 "C4" H 4265 4846 50  0000 L CNN
-F 1 "10uF" H 4265 4755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4188 4650 50  0001 C CNN
-F 3 "~" H 4150 4800 50  0001 C CNN
-	1    4150 4800
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C3a1
 U 1 1 5B6353CA
 P 4600 4250
 F 0 "C3a1" H 4715 4296 50  0000 L CNN
-F 1 "100nF" H 4715 4205 50  0000 L CNN
+F 1 "10uF" H 4715 4205 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4638 4100 50  0001 C CNN
 F 3 "~" H 4600 4250 50  0001 C CNN
 	1    4600 4250
@@ -130,18 +118,11 @@ Wire Wire Line
 	5100 5050 5400 5050
 Text HLabel 5400 5050 2    50   Input ~ 0
 GND
-Wire Wire Line
-	4150 4650 4150 4000
-Wire Wire Line
-	4150 4950 4150 5050
-Wire Wire Line
-	4150 5050 4850 5050
 Connection ~ 5100 5050
 Text Label 5400 3900 2    50   ~ 0
 GND
 Text Label 5400 5050 2    50   ~ 0
 GND
-Connection ~ 4150 4000
 Wire Wire Line
 	4150 4000 4150 3400
 Wire Wire Line
@@ -168,12 +149,12 @@ Wire Wire Line
 	5050 4400 5050 4500
 Connection ~ 4850 4500
 $Comp
-L power_regul:AP7215-33YG-13 U0
+L power_regul:AP7215-33YG-13 U2
 U 1 1 5BB07412
 P 3450 3550
-F 0 "U0" H 3450 3965 50  0000 C CNN
+F 0 "U2" H 3450 3965 50  0000 C CNN
 F 1 "AP7215-33YG-13" H 3450 3874 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-89-3_Handsoldering" H 3450 3550 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-89-3" H 3450 3550 50  0001 C CNN
 F 3 "" H 3450 3550 50  0001 C CNN
 	1    3450 3550
 	1    0    0    -1  
@@ -181,18 +162,15 @@ $EndComp
 Wire Wire Line
 	5400 4000 5050 4000
 Connection ~ 5050 4000
-Connection ~ 4150 5050
-Text HLabel 2850 3400 0    50   Input ~ 0
-VIN
 $Comp
 L Device:C Cr1
 U 1 1 5BB30701
-P 3000 3600
-F 0 "Cr1" H 3115 3646 50  0000 L CNN
-F 1 "1uF" H 3115 3555 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3038 3450 50  0001 C CNN
-F 3 "~" H 3000 3600 50  0001 C CNN
-	1    3000 3600
+P 2950 3600
+F 0 "Cr1" H 3065 3646 50  0000 L CNN
+F 1 "1uF" H 3065 3555 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2988 3450 50  0001 C CNN
+F 3 "~" H 2950 3600 50  0001 C CNN
+	1    2950 3600
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -215,25 +193,20 @@ Connection ~ 4000 3400
 Wire Wire Line
 	4000 3400 4150 3400
 Wire Wire Line
-	2850 3400 3000 3400
+	2950 3450 2950 3400
 Wire Wire Line
-	3000 3450 3000 3400
-Connection ~ 3000 3400
-Wire Wire Line
-	3000 3400 3100 3400
-Wire Wire Line
-	3000 3750 3000 3800
+	2950 3750 2950 3800
 Wire Wire Line
 	4000 3750 4000 3800
 $Comp
 L power:GND #PWR0107
 U 1 1 5BB332C0
-P 3000 3800
-F 0 "#PWR0107" H 3000 3550 50  0001 C CNN
-F 1 "GND" H 3005 3627 50  0000 C CNN
-F 2 "" H 3000 3800 50  0001 C CNN
-F 3 "" H 3000 3800 50  0001 C CNN
-	1    3000 3800
+P 2950 3800
+F 0 "#PWR0107" H 2950 3550 50  0001 C CNN
+F 1 "GND" H 2955 3627 50  0000 C CNN
+F 2 "" H 2950 3800 50  0001 C CNN
+F 3 "" H 2950 3800 50  0001 C CNN
+	1    2950 3800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -249,6 +222,32 @@ F 3 "" H 4000 3800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3450 5050 3450 3750
+Text HLabel 2650 3000 0    50   Input ~ 0
+VUSB
+Text Label 2950 3400 0    50   ~ 0
+5V0
 Wire Wire Line
-	3450 5050 4150 5050
+	2950 3400 3100 3400
+$Comp
+L Device:Jumper_NC_Dual JP1
+U 1 1 5D23AF9C
+P 2950 3000
+F 0 "JP1" H 2950 3239 50  0000 C CNN
+F 1 "Jumper" H 2950 3148 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 2950 3000 50  0001 C CNN
+F 3 "~" H 2950 3000 50  0001 C CNN
+	1    2950 3000
+	1    0    0    -1  
+$EndComp
+Text HLabel 3250 3000 2    50   Input ~ 0
+VIN
+Wire Wire Line
+	3250 3000 3200 3000
+Wire Wire Line
+	2700 3000 2650 3000
+Wire Wire Line
+	2950 3100 2950 3400
+Connection ~ 2950 3400
+Wire Wire Line
+	3450 5050 4850 5050
 $EndSCHEMATC

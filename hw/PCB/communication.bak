@@ -1,10 +1,9 @@
 EESchema Schematic File Version 5
-LIBS:FOD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 5
+Sheet 4 6
 Title ""
 Date ""
 Rev ""
@@ -15,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L antenna:SMA J3
+L antenna:SMA J2
 U 1 1 5BD153FD
 P 6700 3250
-F 0 "J3" H 6800 3225 50  0000 L CNN
+F 0 "J2" H 6800 3225 50  0000 L CNN
 F 1 "SMA" H 6800 3134 50  0000 L CNN
 F 2 "Antenna:SMA" H 6700 3250 50  0001 C CNN
 F 3 "" H 6700 3250 50  0001 C CNN
@@ -95,14 +94,8 @@ Wire Wire Line
 	6100 3550 6300 3550
 Wire Wire Line
 	6300 3450 6100 3450
-Wire Wire Line
-	5600 3050 5600 2950
-Wire Wire Line
-	5600 2950 5750 2950
-Text Label 5750 2950 2    50   ~ 0
-3.3V
 Text HLabel 4150 3000 0    50   Input ~ 0
-3.3V
+3V3
 Text HLabel 4150 3100 0    50   Input ~ 0
 SCK
 Text HLabel 4150 3200 0    50   Input ~ 0
@@ -150,7 +143,7 @@ MOSI
 Text Label 4400 3100 2    50   ~ 0
 SCK
 Text Label 4400 3000 2    50   ~ 0
-3.3V
+3V3
 $Comp
 L power:GND #PWR0110
 U 1 1 5BD2EB6A
@@ -202,11 +195,11 @@ Wire Wire Line
 Wire Wire Line
 	7150 3100 7150 3050
 Wire Wire Line
-	7150 3050 7550 3050
+	7150 3050 7350 3050
 Wire Wire Line
 	7550 3050 7550 3100
-Text Label 7300 3050 0    50   ~ 0
-3.3V
+Text Label 7150 3050 0    50   ~ 0
+3V3
 $Comp
 L power:GND #PWR0113
 U 1 1 5BF39227
@@ -219,14 +212,43 @@ F 3 "" H 7350 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L RF_Module:RFM69HCW U4
+L RF_Module:RFM69HCW U3
 U 1 1 5CF85C91
 P 5600 3550
-F 0 "U4" H 5300 4000 50  0000 C CNN
+F 0 "U3" H 5300 4000 50  0000 C CNN
 F 1 "RFM69HCW" H 5800 4000 50  0000 C CNN
-F 2 "" H 2300 5200 50  0001 C CNN
+F 2 "Transceptor:RFM69HCW" H 2300 5200 50  0001 C CNN
 F 3 "https://www.hoperf.com/data/upload/portal/20181127/5bfcb8284d838.pdf" H 2300 5200 50  0001 C CNN
 	1    5600 3550
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:+3V3 #PWR0115
+U 1 1 5D239D97
+P 5600 3000
+F 0 "#PWR0115" H 5600 2850 50  0001 C CNN
+F 1 "+3V3" H 5615 3173 50  0000 C CNN
+F 2 "" H 5600 3000 50  0001 C CNN
+F 3 "" H 5600 3000 50  0001 C CNN
+	1    5600 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 3050 5600 3000
+$Comp
+L power:+3V3 #PWR0116
+U 1 1 5D23A856
+P 7350 3000
+F 0 "#PWR0116" H 7350 2850 50  0001 C CNN
+F 1 "+3V3" H 7365 3173 50  0000 C CNN
+F 2 "" H 7350 3000 50  0001 C CNN
+F 3 "" H 7350 3000 50  0001 C CNN
+	1    7350 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 3000 7350 3050
+Connection ~ 7350 3050
+Wire Wire Line
+	7350 3050 7550 3050
 $EndSCHEMATC

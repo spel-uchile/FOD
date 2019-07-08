@@ -1,10 +1,9 @@
 EESchema Schematic File Version 5
-LIBS:FOD-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 5 5
+Sheet 5 6
 Title ""
 Date ""
 Rev ""
@@ -15,138 +14,131 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L H-Bridge:SN754410 U3
-U 1 1 5BEA29D2
-P 5650 3450
-F 0 "U3" H 5650 4065 50  0000 C CNN
-F 1 "SN754410" H 5650 3974 50  0000 C CNN
-F 2 "Package_DIP:DIP-16_W7.62mm" H 5500 3550 50  0001 C CNN
-F 3 "" H 5500 3550 50  0001 C CNN
-	1    5650 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 5BEA225C
-P 4750 3500
-F 0 "R3" H 4681 3454 50  0000 R CNN
-F 1 "7.15" H 4681 3545 50  0000 R CNN
-F 2 "Resistor_FOD:RCL12257R15FKEG" V 4680 3500 50  0001 C CNN
-F 3 "~" H 4750 3500 50  0001 C CNN
-	1    4750 3500
-	1    0    0    1   
-$EndComp
-Wire Wire Line
-	6050 3100 6250 3100
-Text Label 6250 3100 2    50   ~ 0
-VCC
-Text Label 4900 3200 0    50   ~ 0
-DPL_SIG
-Text Label 4900 3100 0    50   ~ 0
-DPL_EN
-Text Label 4900 3300 0    50   ~ 0
-DPL_OUT
-Wire Wire Line
-	5250 3100 4900 3100
-Wire Wire Line
-	4900 3200 5250 3200
-Wire Wire Line
-	5250 3400 4900 3400
-Wire Wire Line
-	4900 3500 5250 3500
-Wire Wire Line
-	6050 3400 6250 3400
-Wire Wire Line
-	6250 3500 6050 3500
-Text Label 4900 3400 0    50   ~ 0
-GND
-Text Label 4900 3500 0    50   ~ 0
-GND
-Text Label 6250 3400 2    50   ~ 0
-GND
-Text Label 6250 3500 2    50   ~ 0
-GND
-Wire Wire Line
-	4750 3300 4750 3350
-Wire Wire Line
-	4750 3300 5250 3300
-Wire Wire Line
-	4750 3650 4750 3700
-Wire Wire Line
-	4750 3700 4900 3700
-Wire Wire Line
-	4900 3700 4900 3500
-Wire Wire Line
-	4750 3700 4750 3750
-Connection ~ 4750 3700
-$Comp
 L power:GND #PWR0112
 U 1 1 5BEA3F1A
-P 4750 3750
-F 0 "#PWR0112" H 4750 3500 50  0001 C CNN
-F 1 "GND" H 4755 3577 50  0000 C CNN
-F 2 "" H 4750 3750 50  0001 C CNN
-F 3 "" H 4750 3750 50  0001 C CNN
-	1    4750 3750
+P 5750 3150
+F 0 "#PWR0112" H 5750 2900 50  0001 C CNN
+F 1 "GND" H 5755 2977 50  0000 C CNN
+F 2 "" H 5750 3150 50  0001 C CNN
+F 3 "" H 5750 3150 50  0001 C CNN
+	1    5750 3150
 	1    0    0    -1  
 $EndComp
-Text HLabel 4900 3100 0    50   Input ~ 0
+Text HLabel 4950 2900 0    50   Input ~ 0
 DPL_EN
-Text HLabel 4900 3200 0    50   Input ~ 0
-DPL_SIG
-Text HLabel 4700 3700 0    50   Input ~ 0
+Text HLabel 4950 3950 0    50   Input ~ 0
 GND
-Wire Wire Line
-	4750 3700 4700 3700
-NoConn ~ 6050 3200
-NoConn ~ 6050 3300
-NoConn ~ 6050 3600
-NoConn ~ 6050 3700
-NoConn ~ 6050 3800
-NoConn ~ 5250 3600
-NoConn ~ 5250 3700
-NoConn ~ 5250 3800
-Text HLabel 6250 3100 2    50   Input ~ 0
-VCC
+Text HLabel 5750 2550 0    50   Input ~ 0
+VIN
+Text HLabel 4950 3750 0    50   Input ~ 0
+DPL_STA
 $Comp
-L Device:R R4
-U 1 1 5BF60B18
-P 5150 4300
-F 0 "R4" H 5081 4254 50  0000 R CNN
-F 1 "1K" H 5081 4345 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5080 4300 50  0001 C CNN
-F 3 "~" H 5150 4300 50  0001 C CNN
-	1    5150 4300
-	1    0    0    1   
+L Connector:Screw_Terminal_01x02 J3
+U 1 1 5D23C1A6
+P 6150 2550
+F 0 "J3" H 6230 2542 50  0000 L CNN
+F 1 "Nichrome" H 6230 2451 50  0000 L CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-2_P5.00mm" H 6150 2550 50  0001 C CNN
+F 3 "~" H 6150 2550 50  0001 C CNN
+	1    6150 2550
+	1    0    0    -1  
 $EndComp
-Text Label 5250 4500 0    50   ~ 0
-DPL_STA
 Wire Wire Line
-	5250 4400 5550 4400
-Text Label 5250 4400 0    50   ~ 0
-GND
-Text Label 5000 4150 0    50   ~ 0
-VCC
+	5750 2650 5750 2700
 Wire Wire Line
-	5150 4150 5000 4150
+	5750 2650 5950 2650
 Wire Wire Line
-	5150 4500 5150 4450
+	5950 2550 5750 2550
 Wire Wire Line
-	5150 4500 5550 4500
-Wire Wire Line
-	5150 4500 5100 4500
-Connection ~ 5150 4500
-Text HLabel 5100 4500 0    50   Input ~ 0
-DPL_STA
+	5750 3150 5750 3100
 $Comp
-L Interrupter:AV4524_2PIN U5
-U 1 1 5BF65EF1
-P 5750 4500
-F 0 "U5" H 6028 4546 50  0000 L CNN
-F 1 "AV4524_2PIN" H 6028 4455 50  0000 L CNN
-F 2 "Interrupt:AV4524_2PIN" H 5700 4500 50  0001 C CNN
-F 3 "" H 5700 4500 50  0001 C CNN
-	1    5750 4500
+L Interrupter:AV4524 U4
+U 1 1 5D23F1CD
+P 5350 3850
+F 0 "U4" H 5628 3896 50  0000 L CNN
+F 1 "AV4524" H 5628 3805 50  0000 L CNN
+F 2 "Interrupt:AV4524" H 5300 3850 50  0001 C CNN
+F 3 "" H 5300 3850 50  0001 C CNN
+	1    5350 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 3750 4950 3750
+Wire Wire Line
+	5150 3950 5050 3950
+Wire Wire Line
+	4950 3850 5150 3850
+Text HLabel 4950 3850 0    50   Input ~ 0
+3V3
+$Comp
+L power:GND #PWR0117
+U 1 1 5D2408D3
+P 5050 4000
+F 0 "#PWR0117" H 5050 3750 50  0001 C CNN
+F 1 "GND" H 5055 3827 50  0000 C CNN
+F 2 "" H 5050 4000 50  0001 C CNN
+F 3 "" H 5050 4000 50  0001 C CNN
+	1    5050 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 4000 5050 3950
+Connection ~ 5050 3950
+Wire Wire Line
+	5050 3950 4950 3950
+$Comp
+L Device:R R5
+U 1 1 5D23EA26
+P 5350 3100
+F 0 "R5" H 5420 3146 50  0000 L CNN
+F 1 "330" H 5420 3055 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 5280 3100 50  0001 C CNN
+F 3 "~" H 5350 3100 50  0001 C CNN
+	1    5350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5D23EB22
+P 5150 2900
+F 0 "D2" H 5143 2645 50  0000 C CNN
+F 1 "LED" H 5143 2736 50  0000 C CNN
+F 2 "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5150 2900 50  0001 C CNN
+F 3 "~" H 5150 2900 50  0001 C CNN
+	1    5150 2900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5300 2900 5350 2900
+Wire Wire Line
+	5350 2900 5350 2950
+Wire Wire Line
+	5350 3250 5350 3300
+$Comp
+L power:GND #PWR0118
+U 1 1 5D23F136
+P 5350 3300
+F 0 "#PWR0118" H 5350 3050 50  0001 C CNN
+F 1 "GND" H 5355 3127 50  0000 C CNN
+F 2 "" H 5350 3300 50  0001 C CNN
+F 3 "" H 5350 3300 50  0001 C CNN
+	1    5350 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2900 5000 2900
+Wire Wire Line
+	5350 2900 5450 2900
+Connection ~ 5350 2900
+$Comp
+L Transistor_FET:2N7002 Q1
+U 1 1 5D257A79
+P 5650 2900
+F 0 "Q1" H 5856 2946 50  0000 L CNN
+F 1 "PMV16XNR" H 5856 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5850 2825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5650 2900 50  0001 L CNN
+	1    5650 2900
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
