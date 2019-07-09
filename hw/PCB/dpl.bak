@@ -33,17 +33,6 @@ VIN
 Text HLabel 4950 3750 0    50   Input ~ 0
 DPL_STA
 $Comp
-L Transistor_FET:IRF540N Q1
-U 1 1 5D23A7BD
-P 5650 2900
-F 0 "Q1" H 5856 2946 50  0000 L CNN
-F 1 "PMV16XNR" H 5856 2855 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5900 2825 50  0001 L CIN
-F 3 "http://www.irf.com/product-info/datasheets/data/irf540n.pdf" H 5650 2900 50  0001 L CNN
-	1    5650 2900
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Screw_Terminal_01x02 J3
 U 1 1 5D23C1A6
 P 6150 2550
@@ -141,4 +130,15 @@ Wire Wire Line
 Wire Wire Line
 	5350 2900 5450 2900
 Connection ~ 5350 2900
+$Comp
+L Transistor_FET:2N7002 Q1
+U 1 1 5D257A79
+P 5650 2900
+F 0 "Q1" H 5856 2946 50  0000 L CNN
+F 1 "PMV16XNR" H 5856 2855 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5850 2825 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5650 2900 50  0001 L CNN
+	1    5650 2900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
