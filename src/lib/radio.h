@@ -9,18 +9,7 @@
 #include <RHReliableDatagram.h>
 #include <SPI.h>
 #include <RH_RF69.h>
-//#include "logger.h"
-//#include "atms_data.h"
 #include "gps_data.h"
-//#include "helper_3dmath.h"
-
-#define SEND_DATA 0
-#define SEND_PICTURE 1
-#define SEND_BEACON 2
-#define PING 3
-#define ENABLE_LOW_POWER_MODE 4
-#define DISABLE_LOW_POWER_MODE 5
-#define HELP 6
 
 /**
  * @class Radio
