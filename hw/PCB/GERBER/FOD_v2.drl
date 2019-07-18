@@ -1,8 +1,8 @@
 M48
-; DRILL file {KiCad 6.0.0-unknown-da645c5~86~ubuntu18.04.1} date vie 12 jul 2019 17:11:50 -04
+; DRILL file {KiCad 6.0.0-unknown-920f128~86~ubuntu18.04.1} date jue 18 jul 2019 17:09:33 -04
 ; FORMAT={-:-/ absolute / inch / decimal}
-; #@! TF.CreationDate,2019-07-12T17:11:50-04:00
-; #@! TF.GenerationSoftware,Kicad,Pcbnew,6.0.0-unknown-da645c5~86~ubuntu18.04.1
+; #@! TF.CreationDate,2019-07-18T17:09:33-04:00
+; #@! TF.GenerationSoftware,Kicad,Pcbnew,6.0.0-unknown-920f128~86~ubuntu18.04.1
 FMAT,2
 INCH
 T1C0.0157
@@ -99,14 +99,14 @@ X4.9606Y-2.3287
 X4.9606Y-2.5059
 X5.2165Y-2.3287
 X5.2165Y-2.5059
-X5.876Y-4.0579
-X5.876Y-4.1579
-X5.876Y-4.2579
 X4.7831Y-2.6378
 X4.8831Y-2.6378
 X4.9831Y-2.6378
 X5.0831Y-2.6378
 X5.1831Y-2.6378
+X5.876Y-4.0579
+X5.876Y-4.1579
+X5.876Y-4.2579
 T5
 X4.3533Y-1.6648
 X4.3533Y-1.7648
