@@ -27,7 +27,7 @@ F 3 "" H 5750 3150 50  0001 C CNN
 $EndComp
 Text HLabel 4950 2900 0    50   Input ~ 0
 DPL_EN
-Text HLabel 4950 3950 0    50   Input ~ 0
+Text HLabel 4950 3850 0    50   Input ~ 0
 GND
 Text HLabel 5750 2550 0    50   Input ~ 0
 VIN
@@ -66,10 +66,8 @@ $EndComp
 Wire Wire Line
 	5150 3750 4950 3750
 Wire Wire Line
-	5150 3950 5050 3950
-Wire Wire Line
-	4950 3850 5150 3850
-Text HLabel 4950 3850 0    50   Input ~ 0
+	4950 3850 5050 3850
+Text HLabel 4950 3950 0    50   Input ~ 0
 3V3
 $Comp
 L power:GND #PWR0117
@@ -82,11 +80,6 @@ F 3 "" H 5050 4000 50  0001 C CNN
 	1    5050 4000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5050 4000 5050 3950
-Connection ~ 5050 3950
-Wire Wire Line
-	5050 3950 4950 3950
 $Comp
 L Device:R R5
 U 1 1 5D23EA26
@@ -142,4 +135,11 @@ F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7002.pdf" H 5650 2900 50  000
 	1    5650 2900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4950 3950 5150 3950
+Wire Wire Line
+	5050 3850 5050 4000
+Connection ~ 5050 3850
+Wire Wire Line
+	5050 3850 5150 3850
 $EndSCHEMATC
