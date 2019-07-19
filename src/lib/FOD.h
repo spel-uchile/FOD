@@ -1,17 +1,17 @@
 /**
- * @class DPL
- * @brief Class that manages ballon's deployment
+ * @class FOD
+ * @brief Class that manages the femto-satellite deployment
  * @author: Matías Vidal
  */
 
 /*Requiered Libraries*/
 #include <Arduino.h>
-#include "fod_pines.h"
+#include "fod_pins.h"
 
 class FOD {
     /*Private Members*/
 
-    // DLP Objects
+    // FOD Objects
 
     // Internal Variables
 public:
@@ -20,7 +20,7 @@ public:
     unsigned long t0, dt;
 
     /*Base contructor (null)*/
-    DPL() {}
+    FOD() {}
 
     // methods
     void init(void);
