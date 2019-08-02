@@ -63,10 +63,10 @@ void loop() {
         radio.ack_ping();
     }
     else if (base_cmd == ENABLE_LOW_POWER_MODE) {
-        
+        lowPowerMode();
     }
     else if (base_cmd == DISABLE_LOW_POWER_MODE) {
-        
+        normalMode();
     }
     else if (base_cmd == DEPLOY_FEMTOSATS) {
         fod.deploy();
@@ -84,12 +84,25 @@ void loop() {
 void receiveHandler(int numBytes) {
     while (Wire.available()) {
         cmd = Wire.read();
-	if (cmd == 'D') {
+	if (cmd == DEPLOY_FEMTOSATS) {
             fod.deploy();
 	    SerialUSB.print("Deployment complete at ");
     	    SerialUSB.print(fod.dt);
     	    SerialUSB.println(" milliseconds.");
         }
+	else if (base_cmd == SEND_BEACON) {
+            radio.updateBeacon(&gps.gpsData);
+            radio.send_data();
+    	}
+	else if (cmd == PING) {
+            radio.ack_ping();
+    	}
+	else if (cmd == ENABLE_LOW_POWER_MODE) {
+            lowPowerMode();
+    	}
+	else if (cmd == DISABLE_LOW_POWER_MODE) {
+            normalMode();
+    	}
         SerialUSB.print(cmd);
         cmd = 0;
     } 
@@ -103,4 +116,50 @@ void receiveHandler(int numBytes) {
 void requestHandler() {
     Wire.write(fod.status());
     SerialUSB.println("Sent status");
+}
+
+/**
+ * Enables the low power mode of operation
+ * of the FOD.
+ * Currently it only puts the radio to sleep,
+ * but it is expected to also put the
+ * microcontroller into this state.
+ * @return True if succesfull.
+ */
+bool lowPowerMode() {
+    return radio.lowPowerMode();
+}
+
+/**
+ * Enables the normal mode of operation.
+ */
+void normalMode() {
+    radio.normalMode();
+}
+
+/**
+ * This function displays all the FOD's commands.
+ * These commands are the same for both the user
+ * (via serial) and the OBC (via I2C).
+ */
+void help() {
+    SerialUSB.println(F("Available commands:"));
+    SerialUSB.print(SEND_FOD_STATUS);
+    SerialUSB.println(F(": SEND_FOD_STATUS"));
+    SerialUSB.print(DEPLOY_FEMTOSATS);
+    SerialUSB.println(F(": DEPLOY_FEMTOSATS"));
+    SerialUSB.print(SEND_FEMTOSAT_DATA);
+    SerialUSB.println(F(": SEND_FEMTOSAT_DATA"));
+    SerialUSB.print(SEND_PICTURE);
+    SerialUSB.println(F(": SEND_PICTURE"));
+    SerialUSB.print(SEND_BEACON);
+    SerialUSB.println(F(": SEND_BEACON"));
+    SerialUSB.print(PING);
+    SerialUSB.println(F(": PING"));
+    SerialUSB.print(ENABLE_LOW_POWER_MODE);
+    SerialUSB.println(F(": ENABLE_LOW_POWER_MODE"));
+    SerialUSB.print(DISABLE_LOW_POWER_MODE);
+    SerialUSB.println(F(": DISABLE_LOW_POWER_MODE"));
+    SerialUSB.print(HELP);
+    SerialUSB.println(F(": HELP"));
 }

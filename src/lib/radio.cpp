@@ -162,5 +162,9 @@ uint8_t Radio::read_command(void) {
 }
 
 bool Radio::lowPowerMode() {
-	driver.sleep();
+    return driver.sleep();
+}
+
+void Radio::normalMode() {
+    driver.setModeRx();
 }
