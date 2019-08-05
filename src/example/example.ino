@@ -71,6 +71,9 @@ void loop() {
     else if (base_cmd == DEPLOY_FEMTOSATS) {
         fod.deploy();
     }
+    else if (base_cmd == HELP) {
+	help();
+    }
     base_cmd = 0;
     delay(100);
 }
@@ -90,7 +93,7 @@ void receiveHandler(int numBytes) {
     	    SerialUSB.print(fod.dt);
     	    SerialUSB.println(" milliseconds.");
         }
-	else if (base_cmd == SEND_BEACON) {
+	else if (cmd == SEND_BEACON) {
             radio.updateBeacon(&gps.gpsData);
             radio.send_data();
     	}
@@ -104,7 +107,7 @@ void receiveHandler(int numBytes) {
             normalMode();
     	}
         SerialUSB.print(cmd);
-        cmd = 0;
+        cmd = '*';
     } 
 }
 
