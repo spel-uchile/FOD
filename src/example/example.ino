@@ -8,6 +8,7 @@
 #include "radio.h"
 #include "gps.h"
 #include "cmds.h"
+#include <Wire.h>
 
 #define CLIENT_ADDRESS 1
 #define SERVER_ADDRESS 2
@@ -22,7 +23,6 @@ GPS gps;
 // ===                      INITIAL SETUP                       ===
 // ================================================================
 
-uint8_t base_cmd;
 char cmd;
 
 void setup() {
@@ -32,13 +32,14 @@ void setup() {
         ; // wait for serial port to connect.
     }
     // Initialize femto-satellite's systems
-    SerialUSB.println("Initialize FOD");
+    SerialUSB.println("Initializing FOD");
     fod.init();
     gps.init();
     radio.init();
     Wire.begin(I2C_ADDRESS);
     Wire.onReceive(receiveHandler);
     Wire.onRequest(requestHandler);
+    SerialUSB.println("Done.");
 }
 
 // ================================================================
@@ -47,34 +48,46 @@ void setup() {
 
 void loop() {
     gps.updateData();
-    base_cmd = radio.read_command(); 
-    if (base_cmd == SEND_FEMTOSAT_DATA) {
-      	radio.updateBeacon(&gps.gpsData);
-      	radio.send_data();
+    while (SerialUSB.available()) {
+        cmd = SerialUSB.read() - 48;
+        SerialUSB.print("Received: ");
+        SerialUSB.println((char)(cmd+48));    
+    	//base_cmd = radio.read_command(); 
+    	if (cmd == SEND_FEMTOSAT_DATA) {
+    	    radio.updateBeacon(&gps.gpsData);
+    	    radio.send_data();
+    	}
+    	else if (cmd == SEND_PICTURE) {
+    	    
+    	}
+    	else if (cmd == SEND_BEACON) {
+    	    radio.updateBeacon(&gps.gpsData);
+    	    radio.send_data();
+    	}
+    	else if (cmd == PING) {
+    	    radio.ack_ping();
+    	}
+    	else if (cmd == ENABLE_LOW_POWER_MODE) {
+    	    lowPowerMode();
+    	}
+    	else if (cmd == DISABLE_LOW_POWER_MODE) {
+    	    normalMode();
+    	}
+    	else if (cmd == DEPLOY_FEMTOSATS) {
+    	    fod.deploy();
+	    SerialUSB.print("Deployment complete at ");
+    	    SerialUSB.print(fod.dt);
+    	    SerialUSB.println(" milliseconds.");
+    	}
+    	else if (cmd == HELP) {
+    	    help();
+    	}
+	else {
+            SerialUSB.print((char)(cmd+48));
+            SerialUSB.println(" is not available yet");
+        }
     }
-    else if (base_cmd == SEND_PICTURE) {
-        
-    }
-    else if (base_cmd == SEND_BEACON) {
-        radio.updateBeacon(&gps.gpsData);
-        radio.send_data();
-    }
-    else if (base_cmd == PING) {
-        radio.ack_ping();
-    }
-    else if (base_cmd == ENABLE_LOW_POWER_MODE) {
-        lowPowerMode();
-    }
-    else if (base_cmd == DISABLE_LOW_POWER_MODE) {
-        normalMode();
-    }
-    else if (base_cmd == DEPLOY_FEMTOSATS) {
-        fod.deploy();
-    }
-    else if (base_cmd == HELP) {
-	help();
-    }
-    base_cmd = 0;
+    cmd = '*';
     delay(100);
 }
 

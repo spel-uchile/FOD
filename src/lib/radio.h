@@ -96,6 +96,7 @@ public:
     void displayData(double dataD[], float dataF[], uint8_t dataU8[], uint32_t dataU32);
     void read_frame(void);
     bool lowPowerMode(void);
+    void normalMode(void);
 
 private:
     // methods
