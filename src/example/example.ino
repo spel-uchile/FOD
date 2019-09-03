@@ -6,7 +6,6 @@
 
 #include "FOD.h"
 #include "radio.h"
-#include "gps.h"
 #include "cmds.h"
 #include <Wire.h>
 
@@ -17,24 +16,25 @@
 /*Object Definitions*/
 FOD fod;
 Radio radio(RADIO_SLAVESELECTPIN, RADIO_INTERRUPT, RADIO_RST, CLIENT_ADDRESS, SERVER_ADDRESS);
-GPS gps;
 
 // ================================================================
 // ===                      INITIAL SETUP                       ===
 // ================================================================
 
-char cmd;
+char cmd = '*';
+String serial_data;
+char data[100];
 
 void setup() {
     // Initialize serial communication
     SerialUSB.begin(115200);
+    SerialUSB.setTimeout(200);
     while (!SerialUSB) {
         ; // wait for serial port to connect.
     }
     // Initialize femto-satellite's systems
     SerialUSB.println("Initializing FOD");
     fod.init();
-    gps.init();
     radio.init();
     Wire.begin(I2C_ADDRESS);
     Wire.onReceive(receiveHandler);
