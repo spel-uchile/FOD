@@ -28,16 +28,13 @@ typedef struct {
     float IMU2;
     float IMU3;
     */
-    float GPS_Lat;
-    float GPS_Lng;
-    float GPS_Alt;
-    float GPS_Crse;
-    float GPS_Speed;
     uint8_t GPS_HH;
     uint8_t GPS_MM;
     uint8_t GPS_SS;
-    uint8_t GPS_validity;
     uint32_t GPS_Sat;
+    float GPS_Lat;
+    float GPS_Lng;
+    float GPS_Alt;
 } frame_t;
 
 class Radio {
