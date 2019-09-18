@@ -60,5 +60,5 @@ void FOD::updateData(char data[]) {
 }
 
 void FOD::setOnTime(char data[]) {
-    on_time = ((String) data).toInt();
+    sscanf(data, "%d", &on_time);
 }
