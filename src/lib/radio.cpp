@@ -52,17 +52,14 @@ void Radio::updateBeacon(GpsData *gpsData) {
     beacon_tx_.IMU2 = gyroData->y;
     beacon_tx_.IMU3 = gyroData->z;
     */
-    beacon_tx_.GPS_Lat = (float) gpsData->latitude;
-    beacon_tx_.GPS_Lng = (float) gpsData->longitude;
-    beacon_tx_.GPS_Alt = (float) gpsData->altitude;
-    beacon_tx_.GPS_Crse = (float) gpsData->crse;
-    beacon_tx_.GPS_Speed = (float) gpsData->mps;
     beacon_tx_.GPS_HH = gpsData->hour;
     beacon_tx_.GPS_MM = gpsData->minute;
     beacon_tx_.GPS_SS = gpsData->second;
-    beacon_tx_.GPS_validity = gpsData->validity;
     beacon_tx_.GPS_Sat = gpsData->satellites;
-}
+    beacon_tx_.GPS_Lat = (float) gpsData->latitude;
+    beacon_tx_.GPS_Lng = (float) gpsData->longitude;
+    beacon_tx_.GPS_Alt = (float) gpsData->altitude;
+    }
 
 void Radio::send_data() {
     sendFrame((uint8_t *)&beacon_tx_, beacon_tx_size_);
@@ -115,8 +112,6 @@ void Radio::displayFrame() {
     SerialUSB.print(beacon.GPS_MM);
     SerialUSB.print(":");
     SerialUSB.print(beacon.GPS_SS);
-    SerialUSB.print("    Validity: ");
-    SerialUSB.print(beacon.GPS_validity, BIN);
     SerialUSB.print("    Sat: ");
     SerialUSB.print(beacon.GPS_Sat);
     SerialUSB.print("    Location: ");
@@ -125,10 +120,6 @@ void Radio::displayFrame() {
     SerialUSB.print(beacon.GPS_Lng, 6);
     SerialUSB.print("    Altitude (GPS): ");
     SerialUSB.print(beacon.GPS_Alt);
-    SerialUSB.print("    Course: ");
-    SerialUSB.print(beacon.GPS_Crse);
-    SerialUSB.print("    Speed: ");
-    SerialUSB.println(beacon.GPS_Speed);
 }
 
 void Radio::ping(uint8_t to) {

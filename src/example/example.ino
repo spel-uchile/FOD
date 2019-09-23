@@ -55,7 +55,7 @@ void loop() {
 	}
 	buf[i] = 0;
 	sscanf(buf, "%d %[^\n]s", &cmd, &params);
-    	executeCommands(cmd, params);
+    	executeCommand(cmd, params);
     }
     delay(10);
 }
@@ -74,7 +74,7 @@ void receiveHandler(int numBytes) {
     }
     buf[i] = 0;
     sscanf(buf, "%d %[^\n]s", &cmd, &params);
-    executeCommands(cmd, params); 
+    executeCommand(cmd, params); 
 }
 
 /**
@@ -137,7 +137,7 @@ void help() {
     SerialUSB.println(F(": GET_VERSION"));
 }
 
-void executeCommand(char cmd, char params[]) {
+void executeCommand(int cmd, char params[]) {
     SerialUSB.print("Received: ");
     SerialUSB.print(cmd);
     SerialUSB.print("   Command: ");
@@ -169,7 +169,7 @@ void executeCommand(char cmd, char params[]) {
         SerialUSB.print("UPDATE_DATA");
 	SerialUSB.print("   Parameters: ");
 	SerialUSB.println(params);
-        fod.updateData(data);
+        fod.updateData(params);
         SerialUSB.print("Data: ");
         SerialUSB.print("HH:MM:SS: ");
         SerialUSB.print(fod.gpsData.hour);
