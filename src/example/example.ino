@@ -83,8 +83,47 @@ void receiveHandler(int numBytes) {
  * back to him.
  */
 void requestHandler() {
-    Wire.write(fod.status());
-    SerialUSB.println("Sent status");
+    SerialUSB.print("Received request: ");
+    SerialUSB.print(cmd);
+    SerialUSB.print("   Command: ");
+    if (cmd == GET_CONFIG) {
+	SerialUSB.println("GET_CONFIG");
+	int ver_int = int(fod.version);
+	int ver_dec = (fod.version - ver_int)*10;
+	sprintf(buf, "%d.%d %d %d %d",
+		ver_int, ver_dec, (int)fod.status(),
+		fod.on_time, fod.attempts);
+	Wire.write(buf);
+	SerialUSB.print("Sent: ");
+	SerialUSB.println(buf);
+    }
+    else if (cmd == FOD_GET_STATUS) {
+	SerialUSB.println("FOD_GET_STATUS");
+	if (fod.status()) {
+	    Wire.write('1');
+	    SerialUSB.print("Sent: ");
+	    SerialUSB.println(1);
+	}
+	else {
+	    Wire.write('0');
+	    SerialUSB.print("Sent: ");
+	    SerialUSB.println(0);
+	}
+    else if (cmd == GET_VERSION) {
+	SerialUSB.println("GET_VERSION");
+	int ver_int = int(fod.version);
+	int ver_dec = (fod.version - ver_int)*10;
+	sprintf(buf, "%d.%d", ver_int, ver_dec);
+	Wire.write(buf);
+	SerialUSB.print("Sent: ");
+	SerialUSB.println(buf);
+    }
+    else {
+	SerialUSB.print(cmd);
+	SerialUSB.println(" is not available yet");
+	Wire.write(cmd);
+    }
+    cmd = 12;
 }
 
 /**
@@ -115,8 +154,10 @@ void normalMode() {
  */
 void help() {
     SerialUSB.println(F("Available commands:"));
-    SerialUSB.print(HELP);
-    SerialUSB.println(F(": HELP"));
+    SerialUSB.print(UPDATE_DATA);
+    SerialUSB.println(F(": UPDATE_DATA"));
+    SerialUSB.print(SEND_BEACON);
+    SerialUSB.println(F(": SEND_BEACON"));
     SerialUSB.print(DEPLOY_FEMTOSATS);
     SerialUSB.println(F(": DEPLOY_FEMTOSATS"));
     SerialUSB.print(FOD_GET_STATUS);
@@ -125,47 +166,28 @@ void help() {
     SerialUSB.println(F(": SEND_FEMTOSAT_DATA"));
     SerialUSB.print(SET_ON_TIME);
     SerialUSB.println(F(": SET_ON_TIME"));
-    SerialUSB.print(SEND_BEACON);
-    SerialUSB.println(F(": SEND_BEACON"));
-    SerialUSB.print(UPDATE_DATA);
-    SerialUSB.println(F(": UPDATE_DATA"));
+    SerialUSB.print(GET_CONFIG);
+    SerialUSB.println(F(": GET_CONFIG"));
+    SerialUSB.print(GET_VERSION);
+    SerialUSB.println(F(": GET_VERSION"));
     SerialUSB.print(ENABLE_LOW_POWER_MODE);
     SerialUSB.println(F(": ENABLE_LOW_POWER_MODE"));
     SerialUSB.print(DISABLE_LOW_POWER_MODE);
     SerialUSB.println(F(": DISABLE_LOW_POWER_MODE"));
-    SerialUSB.print(GET_VERSION);
-    SerialUSB.println(F(": GET_VERSION"));
+    SerialUSB.print(HELP);
+    SerialUSB.println(F(": HELP"));
 }
 
+/**
+ * Executes a command received with its corresponding parameters.
+ * @param cmd: Int with the command number.
+ * @param params: A char array containing all the parameters.
+ */
 void executeCommand(int cmd, char params[]) {
     SerialUSB.print("Received: ");
     SerialUSB.print(cmd);
     SerialUSB.print("   Command: ");
-    if (cmd == SEND_FEMTOSAT_DATA) {
-    	SerialUSB.println("SEND_FEMTOSAT_DATA");
-    	radio.updateBeacon(&fod.gpsData);
-    	radio.send_data();
-    }
-    else if (cmd == FOD_GET_STATUS) {
-	SerialUSB.println("FOD_GET_STATUS");
-        SerialUSB.print("Released: ");
-        SerialUSB.println(fod.status());    
-    }
-    else if (cmd == SET_ON_TIME) {
-        SerialUSB.print("SET_ON_TIME");
-	SerialUSB.print("   Parameters: ");
-	SerialUSB.println(params);
-        fod.setOnTime(params);
-        SerialUSB.print("New on time: ");
-        SerialUSB.print(fod.on_time);
-        SerialUSB.println(" ms.");
-    }
-    else if (cmd == SEND_BEACON) {
-	SerialUSB.println("SEND_BEACON");
-    	radio.updateBeacon(&fod.gpsData);
-    	radio.send_data();
-    }
-    else if (cmd == UPDATE_DATA) {
+    if (cmd == UPDATE_DATA) {
         SerialUSB.print("UPDATE_DATA");
 	SerialUSB.print("   Parameters: ");
 	SerialUSB.println(params);
@@ -186,6 +208,53 @@ void executeCommand(int cmd, char params[]) {
         SerialUSB.print("    Altitude (GPS): ");
         SerialUSB.println(fod.gpsData.altitude, 6);
     }
+    else if (cmd == SEND_BEACON) {
+	SerialUSB.println("SEND_BEACON");
+    	radio.updateBeacon(&fod.gpsData);
+    	radio.send_data();
+    }
+    else if (cmd == DEPLOY_FEMTOSATS) {
+    	SerialUSB.println("DEPLOY_FEMTOSATS");
+    	fod.deploy();
+	SerialUSB.print("Deployment complete at ");
+    	SerialUSB.print(fod.dt);
+    	SerialUSB.println(" ms");
+    }
+    else if (cmd == FOD_GET_STATUS) {
+	SerialUSB.println("FOD_GET_STATUS");
+        SerialUSB.print("Released: ");
+        SerialUSB.println(fod.status());    
+    }
+    else if (cmd == SEND_FEMTOSAT_DATA) {
+    	SerialUSB.println("SEND_FEMTOSAT_DATA");
+    	radio.updateBeacon(&fod.gpsData);
+    	radio.send_data();
+    }
+    else if (cmd == SET_ON_TIME) {
+        SerialUSB.print("SET_ON_TIME");
+	SerialUSB.print("   Parameters: ");
+	SerialUSB.println(params);
+        fod.setOnTime(params);
+        SerialUSB.print("New on time: ");
+        SerialUSB.print(fod.on_time);
+        SerialUSB.println(" ms");
+    }
+    else if (cmd == GET_CONFIG) {
+        SerialUSB.println("GET_CONFIG");
+        SerialUSB.print("Version: ");
+        SerialUSB.print(fod.version, 1);
+        SerialUSB.print("   Released: ");
+        SerialUSB.print(fod.status());
+        SerialUSB.print("   On time: ");
+        SerialUSB.print(fod.on_time);
+        SerialUSB.print("ms   Attempts: ");
+        SerialUSB.println(fod.attempts);
+    }
+    else if (cmd == GET_VERSION) {
+        SerialUSB.println("GET_VERSION");
+        SerialUSB.print("Current version is: ");
+        SerialUSB.println(fod.version);
+    }
     else if (cmd == ENABLE_LOW_POWER_MODE) {
     	SerialUSB.println("ENABLE_LOW_POWER_MODE");
     	lowPowerMode();
@@ -194,25 +263,15 @@ void executeCommand(int cmd, char params[]) {
 	SerialUSB.println("DISABLE_LOW_POWER_MODE");
     	normalMode();
     }
-    else if (cmd == DEPLOY_FEMTOSATS) {
-    	SerialUSB.println("DEPLOY_FEMTOSATS");
-    	fod.deploy();
-	SerialUSB.print("Deployment complete at ");
-    	SerialUSB.print(fod.dt);
-    	SerialUSB.println(" ms.");
-    }
     else if (cmd == HELP) {
 	SerialUSB.println("HELP");
     	help();
     }
-    else if (cmd == GET_VERSION) {
-        SerialUSB.println("GET_VERSION");
-        SerialUSB.print("Current version is: ");
-        SerialUSB.println(fod.version);
+    else if (cmd == 12) {
+        SerialUSB.println("DONE");
     }
     else {
         SerialUSB.print(cmd);
         SerialUSB.println(" is not available yet");
     }
-    cmd = 0;
 }

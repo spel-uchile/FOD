@@ -23,7 +23,7 @@ public:
     unsigned long t0, dt;
     float version;
     char lat[12], lng[12], alt[12];
-    int hour, min, sec, sats, on_time;
+    int hour, min, sec, sats, on_time, attempts;
 
     /*Base contructor (null)*/
     FOD() {}

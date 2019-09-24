@@ -4,7 +4,7 @@ bool deployed;
 unsigned long t0, dt;
 float version;
 char lat[12], lng[12], alt[12];
-int hour, min, sec, sats, on_time;
+int hour, min, sec, sats, on_time, attempts;
 
 //-------------------------- Public Methods --------------------------
 /**
@@ -17,6 +17,7 @@ void FOD::init(void) {
     pinMode(DPL_STATUS, INPUT);
     on_time = 1500;
     version = 2.0;
+    attempts = 0;
 }
 
 /**
@@ -36,6 +37,7 @@ void FOD::deploy(void) {
 	dt = millis() - t0;
     }	    
     digitalWrite(DPL_EN, LOW);
+    attempts++;
 }
 
 /**
@@ -47,6 +49,11 @@ bool FOD::status(void) {
     return digitalRead(DPL_STATUS);
 }
 
+/**
+ * Updates the time, location and number of GPS satellites
+ * connected.
+ * @param data: A char array with the new data.
+ */
 void FOD::updateData(char data[]) {
     sscanf(data, "%d %d %d %d %s %s %s",
            &hour, &min, &sec, &sats, &lat, &lng, &alt);
@@ -59,6 +66,11 @@ void FOD::updateData(char data[]) {
     gpsData.altitude = ((String) alt).toFloat();
 }
 
+/**
+ * Sets the duration of the deployment attempt in milliseconds.
+ * @param data: A char array containing an integer number
+ *              with the time in milliseconds.
+ */
 void FOD::setOnTime(char data[]) {
     sscanf(data, "%d", &on_time);
 }
