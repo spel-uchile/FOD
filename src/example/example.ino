@@ -27,12 +27,13 @@ int cmd = 0;
 
 void setup() {
     // Initialize serial communication
+    delay(1000);
     SerialUSB.begin(115200);
     SerialUSB.setTimeout(200);
     while (!SerialUSB) {
         ; // wait for serial port to connect.
     }
-    // Initialize femto-satellite's systems
+    // Initialize FOD's systems
     SerialUSB.println("Initializing FOD");
     fod.init();
     radio.init();
@@ -247,7 +248,7 @@ void executeCommand(int cmd, char params[]) {
         SerialUSB.print(fod.status());
         SerialUSB.print("   On time: ");
         SerialUSB.print(fod.on_time);
-        SerialUSB.print("ms   Attempts: ");
+        SerialUSB.print(" ms   Attempts: ");
         SerialUSB.println(fod.attempts);
     }
     else if (cmd == GET_VERSION) {
