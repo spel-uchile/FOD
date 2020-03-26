@@ -1,4 +1,4 @@
-update=dom 22 mar 2020 17:26:00 -03
+update=jue 26 mar 2020 17:54:36 -03
 version=1
 last_client=kicad
 [general]
@@ -24,6 +24,8 @@ version=1
 5=00000000-0000-0000-0000-00005e86d3fa:Data logger
 6=00000000-0000-0000-0000-00005bd13dd6:Communication
 7=00000000-0000-0000-0000-00005d239b84:Programmer
+[ModEditFrame]
+version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -77,7 +79,7 @@ DimensionPrecision=1
 SolderMaskClearance=0.05
 SolderMaskMinWidth=0
 SolderPasteClearance=0
-SolderPasteRatio=-0
+SolderPasteRatio=0
 [pcbnew/Layer.F.Cu]
 Name=F.Cu
 Type=0
@@ -300,5 +302,3 @@ uViaDrill=0.1
 dPairWidth=0.25
 dPairGap=0.25
 dPairViaGap=0.25
-[ModEditFrame]
-version=1
