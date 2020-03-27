@@ -217,9 +217,13 @@ Wire Wire Line
 Wire Wire Line
 	7650 3600 7900 3600
 Wire Wire Line
-	7650 3700 7900 3700
+	7650 3700 8100 3700
 Wire Wire Line
-	7650 3800 7900 3800
+	7650 3800 7950 3800
+Wire Wire Line
+	7950 3800 7950 4000
+Wire Wire Line
+	7950 4000 8100 4000
 Wire Wire Line
 	8550 3300 8300 3300
 Wire Wire Line
@@ -311,7 +315,7 @@ MISO
 Text Label 6100 4400 2    50   ~ 0
 MISO
 Text Label 6300 4400 0    50   ~ 0
-VIN
+VAUX
 Text Label 6300 4500 0    50   ~ 0
 3V3
 Text Label 6300 4600 0    50   ~ 0
@@ -363,9 +367,9 @@ Text Label 7900 3500 2    50   ~ 0
 Text Label 7900 3600 2    50   ~ 0
 GND
 Text Label 7900 3700 2    50   ~ 0
-VIN
+VAUX2
 Text Label 7900 3800 2    50   ~ 0
-VIN
+VAUX
 Text Label 7900 4400 2    50   ~ 0
 DPL_STA1
 Text Label 7900 4500 2    50   ~ 0
@@ -379,9 +383,9 @@ Text Label 8300 3500 0    50   ~ 0
 Text Label 8300 3600 0    50   ~ 0
 GND
 Text Label 8300 3700 0    50   ~ 0
-VIN
+VAUX2
 Text Label 8300 3800 0    50   ~ 0
-VIN
+VAUX
 $Comp
 L power:GND #PWR0104
 U 1 1 5BAA2798
@@ -457,6 +461,17 @@ F 1 "GND" H 6455 5827 50  0000 C CNN
 F 2 "" H 6450 6000 50  0001 C CNN
 F 3 "" H 6450 6000 50  0001 C CNN
 	1    6450 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5E8670A2
+P 8100 3850
+F 0 "R8" H 8170 3805 50  0000 L CNN
+F 1 "0" H 8170 3895 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8030 3850 50  0001 C CNN
+F 3 "~" H 8100 3850 50  0001 C CNN
+	1    8100 3850
 	1    0    0    -1  
 $EndComp
 $Comp
