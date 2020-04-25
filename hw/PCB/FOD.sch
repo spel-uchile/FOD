@@ -1,10 +1,9 @@
 EESchema Schematic File Version 5
-LIBS:FOD-cache
-EELAYER 29 0
+EELAYER 32 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -13,453 +12,605 @@ Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
+Comment5 ""
+Comment6 ""
+Comment7 ""
+Comment8 ""
+Comment9 ""
 $EndDescr
-Text Label 5150 1900 2    50   ~ 0
-SWDIO
-Text Label 5150 2000 2    50   ~ 0
-SWCLK
-Text Label 5150 2100 2    50   ~ 0
-3V3
-Text Label 5150 2200 2    50   ~ 0
-VDDCORE
+Connection ~ 4000 1800
+Connection ~ 3500 1800
+Connection ~ 3750 2300
+NoConn ~ 4750 1650
+NoConn ~ 4750 1750
+NoConn ~ 4750 2050
+NoConn ~ 4750 2150
+NoConn ~ 4750 2250
+NoConn ~ 4750 2350
+NoConn ~ 6450 2350
+NoConn ~ 6450 1450
+NoConn ~ 6450 1550
+NoConn ~ 6450 2450
+NoConn ~ 6450 2550
+NoConn ~ 6450 3250
+NoConn ~ 6450 3350
+NoConn ~ 6450 3450
+NoConn ~ 6450 3550
+NoConn ~ 6450 3750
+NoConn ~ 4750 3550
 Wire Wire Line
-	4800 1900 5150 1900
+	3100 4700 3100 4800
 Wire Wire Line
-	4800 2000 5150 2000
+	3250 4700 3100 4700
 Wire Wire Line
-	4800 2100 5150 2100
+	3250 5500 3000 5500
 Wire Wire Line
-	4800 2200 5150 2200
+	3500 1450 3500 1800
 Wire Wire Line
-	4800 2300 5150 2300
+	3500 1450 4750 1450
 Wire Wire Line
-	4800 2400 5150 2400
+	3500 1800 3500 1900
 Wire Wire Line
-	4800 2500 5150 2500
+	3500 2200 3500 2300
 Wire Wire Line
-	4800 2700 5150 2700
+	3500 2300 3750 2300
 Wire Wire Line
-	4800 2800 5150 2800
+	3600 1800 3500 1800
 Wire Wire Line
-	4800 2900 5150 2900
+	3750 2300 3750 2400
 Wire Wire Line
-	4800 3000 5150 3000
+	3750 2300 4000 2300
 Wire Wire Line
-	4800 3100 5150 3100
+	3900 1800 4000 1800
 Wire Wire Line
-	4800 3200 5150 3200
+	3900 4400 4250 4400
 Wire Wire Line
-	4800 3300 5150 3300
+	3900 4700 4250 4700
 Wire Wire Line
-	4800 3400 5150 3400
-Text Label 5150 2500 2    50   ~ 0
-RESET
-Text Label 5150 2700 2    50   ~ 0
-USB_P
-Text Label 5150 2800 2    50   ~ 0
-USB_N
-Text Label 5150 3100 2    50   ~ 0
-MISO
-Text Label 5150 2400 2    50   ~ 0
-USB_ID
-Text Label 5150 3300 2    50   ~ 0
-SCK
-Text Label 5150 3400 2    50   ~ 0
-MOSI
-Text Label 2850 2800 0    50   ~ 0
+	3950 5600 4350 5600
+Wire Wire Line
+	3950 5800 4250 5800
+Wire Wire Line
+	4000 1550 4000 1800
+Wire Wire Line
+	4000 1550 4750 1550
+Wire Wire Line
+	4000 1800 4000 1900
+Wire Wire Line
+	4000 2300 4000 2200
+Wire Wire Line
+	4250 4500 3900 4500
+Wire Wire Line
+	4250 4600 3900 4600
+Wire Wire Line
+	4250 5800 4250 5900
+Wire Wire Line
+	4350 1850 4750 1850
+Wire Wire Line
+	4350 1950 4750 1950
+Wire Wire Line
+	4350 2450 4750 2450
+Wire Wire Line
+	4350 2550 4750 2550
+Wire Wire Line
+	4350 2650 4750 2650
+Wire Wire Line
+	4350 2750 4750 2750
+Wire Wire Line
+	4350 2850 4750 2850
+Wire Wire Line
+	4350 2950 4750 2950
+Wire Wire Line
+	4350 3050 4750 3050
+Wire Wire Line
+	4350 3150 4750 3150
+Wire Wire Line
+	4350 3250 4750 3250
+Wire Wire Line
+	4350 3350 4750 3350
+Wire Wire Line
+	4350 3450 4750 3450
+Wire Wire Line
+	4350 3650 4750 3650
+Wire Wire Line
+	4350 3750 4750 3750
+Wire Wire Line
+	4350 5500 3950 5500
+Wire Wire Line
+	4350 5700 3950 5700
+Wire Wire Line
+	4600 4400 4950 4400
+Wire Wire Line
+	4600 4600 4950 4600
+Wire Wire Line
+	4600 4800 4950 4800
+Wire Wire Line
+	4600 5500 4950 5500
+Wire Wire Line
+	4600 5600 4950 5600
+Wire Wire Line
+	4600 5700 4950 5700
+Wire Wire Line
+	4600 5800 4950 5800
+Wire Wire Line
+	4600 5900 4950 5900
+Wire Wire Line
+	4700 5000 4700 5100
+Wire Wire Line
+	4700 6000 4700 6100
+Wire Wire Line
+	4700 6000 4950 6000
+Wire Wire Line
+	4950 4500 4600 4500
+Wire Wire Line
+	4950 4700 4600 4700
+Wire Wire Line
+	4950 4900 4600 4900
+Wire Wire Line
+	4950 5000 4700 5000
+Wire Wire Line
+	5700 5500 5950 5500
+Wire Wire Line
+	5850 4400 6100 4400
+Wire Wire Line
+	6300 4400 6650 4400
+Wire Wire Line
+	6300 4600 6650 4600
+Wire Wire Line
+	6300 4700 6650 4700
+Wire Wire Line
+	6350 5500 6650 5500
+Wire Wire Line
+	6350 5700 6650 5700
+Wire Wire Line
+	6350 5800 6650 5800
+Wire Wire Line
+	6400 4800 6650 4800
+Wire Wire Line
+	6400 4950 6400 4800
+Wire Wire Line
+	6450 1650 6800 1650
+Wire Wire Line
+	6450 1750 6800 1750
+Wire Wire Line
+	6450 1850 6800 1850
+Wire Wire Line
+	6450 1950 6800 1950
+Wire Wire Line
+	6450 2050 6800 2050
+Wire Wire Line
+	6450 2150 6800 2150
+Wire Wire Line
+	6450 2250 6800 2250
+Wire Wire Line
+	6450 2650 6800 2650
+Wire Wire Line
+	6450 2750 6800 2750
+Wire Wire Line
+	6450 2850 6800 2850
+Wire Wire Line
+	6450 2950 6800 2950
+Wire Wire Line
+	6450 3050 6800 3050
+Wire Wire Line
+	6450 3150 6800 3150
+Wire Wire Line
+	6450 3650 6800 3650
+Wire Wire Line
+	6450 5900 6450 6000
+Wire Wire Line
+	6650 4500 6300 4500
+Wire Wire Line
+	6650 5600 6350 5600
+Wire Wire Line
+	6650 5900 6450 5900
+Wire Wire Line
+	7500 4400 7900 4400
+Wire Wire Line
+	7500 4500 7900 4500
+Wire Wire Line
+	7650 3300 7900 3300
+Wire Wire Line
+	7650 3400 7900 3400
+Wire Wire Line
+	7650 3500 7900 3500
+Wire Wire Line
+	7650 3600 7900 3600
+Wire Wire Line
+	7650 3700 8100 3700
+Wire Wire Line
+	7650 3800 7950 3800
+Wire Wire Line
+	7950 3800 7950 4000
+Wire Wire Line
+	7950 4000 8100 4000
+Wire Wire Line
+	8550 3300 8300 3300
+Wire Wire Line
+	8550 3400 8300 3400
+Wire Wire Line
+	8550 3500 8300 3500
+Wire Wire Line
+	8550 3600 8300 3600
+Wire Wire Line
+	8550 3700 8300 3700
+Wire Wire Line
+	8550 3800 8300 3800
+Text Label 3000 5500 0    50   ~ 0
+VUSB
+Text Label 3750 2300 0    50   ~ 0
 GND
-Text Label 5150 2900 2    50   ~ 0
-SCL
-Text Label 5150 3000 2    50   ~ 0
-SDA
-Text Label 2850 2700 0    50   ~ 0
-VDDANA
-Text Label 2850 2000 0    50   ~ 0
-XOUT32
-Text Label 2850 1900 0    50   ~ 0
+Text Label 4250 4400 2    50   ~ 0
+VUSB
+Text Label 4250 4500 2    50   ~ 0
+USB_P
+Text Label 4250 4600 2    50   ~ 0
+USB_N
+Text Label 4250 4700 2    50   ~ 0
+USB_ID
+Text Label 4350 1450 0    50   ~ 0
 XIN32
-Wire Wire Line
-	3200 2700 2850 2700
-Wire Wire Line
-	2850 2800 3200 2800
-Wire Wire Line
-	3200 3100 2850 3100
-Wire Wire Line
-	2850 3200 3200 3200
-Wire Wire Line
-	3200 3300 2850 3300
-Wire Wire Line
-	2850 3400 3200 3400
-$Sheet
-S 1700 4700 700  500 
-U 5B6351C6
-F0 "Power" 50
-F1 "power.sch" 50
-F2 "3V3" I R 2400 4900 50 
-F3 "VDDANA" I R 2400 4800 50 
-F4 "VDDCORE" I R 2400 5000 50 
-F5 "GND" I R 2400 5100 50 
-F6 "VIN" I L 1700 4800 50 
-F7 "VUSB" I L 1700 4900 50 
-$EndSheet
-Text Label 2800 5000 2    50   ~ 0
-VDDCORE
-Text Label 2800 4800 2    50   ~ 0
+Text Label 4350 1550 0    50   ~ 0
+XOUT32
+Text Label 4350 1850 0    50   ~ 0
+GND
+Text Label 4350 1950 0    50   ~ 0
 VDDANA
-Wire Wire Line
-	2800 4800 2400 4800
-Wire Wire Line
-	2400 4900 2800 4900
-Wire Wire Line
-	2800 5000 2400 5000
+Text Label 4350 2450 0    50   ~ 0
+DPL_EN1
+Text Label 4350 2550 0    50   ~ 0
+DPL_STA1
+Text Label 4350 2650 0    50   ~ 0
+DPL_STA2
+Text Label 4350 2750 0    50   ~ 0
+DPL_EN2
+Text Label 4350 2850 0    50   ~ 0
+TRX_INT
+Text Label 4350 2950 0    50   ~ 0
+DL_NSS
+Text Label 4350 3050 0    50   ~ 0
+3V3
+Text Label 4350 3150 0    50   ~ 0
+GND
+Text Label 4350 3250 0    50   ~ 0
+MOSI
+Text Label 4350 3350 0    50   ~ 0
+SCK
+Text Label 4350 3450 0    50   ~ 0
+MISO
+Text Label 4350 3650 0    50   ~ 0
+TRX_NSS
+Text Label 4350 3750 0    50   ~ 0
+TRX_RST
+Text Label 4350 5500 2    50   ~ 0
+VDDANA
+Text Label 4350 5600 2    50   ~ 0
+3V3
+Text Label 4350 5700 2    50   ~ 0
+VDDCORE
+Text Label 4600 4400 0    50   ~ 0
+3V3
+Text Label 4600 4500 0    50   ~ 0
+SCK
+Text Label 4600 4600 0    50   ~ 0
+MOSI
+Text Label 4600 4700 0    50   ~ 0
+TRX_NSS
+Text Label 4600 4800 0    50   ~ 0
+TRX_RST
+Text Label 4600 4900 0    50   ~ 0
+TRX_INT
+Text Label 4600 5500 0    50   ~ 0
+3V3
+Text Label 4600 5600 0    50   ~ 0
+SCK
+Text Label 4600 5700 0    50   ~ 0
+MOSI
+Text Label 4600 5800 0    50   ~ 0
+DL_NSS
+Text Label 4600 5900 0    50   ~ 0
+DL_CD
+Text Label 5950 5500 2    50   ~ 0
+MISO
+Text Label 6100 4400 2    50   ~ 0
+MISO
+Text Label 6300 4400 0    50   ~ 0
+VAUX
+Text Label 6300 4500 0    50   ~ 0
+3V3
+Text Label 6300 4600 0    50   ~ 0
+DPL_EN1
+Text Label 6300 4700 0    50   ~ 0
+DPL_EN2
+Text Label 6350 5500 0    50   ~ 0
+3V3
+Text Label 6350 5600 0    50   ~ 0
+SWDIO
+Text Label 6350 5700 0    50   ~ 0
+SWCLK
+Text Label 6350 5800 0    50   ~ 0
+RESET
+Text Label 6800 1650 2    50   ~ 0
+SWDIO
+Text Label 6800 1750 2    50   ~ 0
+SWCLK
+Text Label 6800 1850 2    50   ~ 0
+3V3
+Text Label 6800 1950 2    50   ~ 0
+VDDCORE
+Text Label 6800 2050 2    50   ~ 0
+GND
+Text Label 6800 2150 2    50   ~ 0
+USB_ID
+Text Label 6800 2250 2    50   ~ 0
+RESET
+Text Label 6800 2650 2    50   ~ 0
+3V3
+Text Label 6800 2750 2    50   ~ 0
+GND
+Text Label 6800 2850 2    50   ~ 0
+USB_P
+Text Label 6800 2950 2    50   ~ 0
+USB_N
+Text Label 6800 3050 2    50   ~ 0
+SCL
+Text Label 6800 3150 2    50   ~ 0
+SDA
+Text Label 6800 3650 2    50   ~ 0
+DL_CD
+Text Label 7900 3300 2    50   ~ 0
+SDA
+Text Label 7900 3400 2    50   ~ 0
+SCL
+Text Label 7900 3500 2    50   ~ 0
+3V3
+Text Label 7900 3600 2    50   ~ 0
+GND
+Text Label 7900 3700 2    50   ~ 0
+VAUX2
+Text Label 7900 3800 2    50   ~ 0
+VAUX
+Text Label 7900 4400 2    50   ~ 0
+DPL_STA1
+Text Label 7900 4500 2    50   ~ 0
+DPL_STA2
+Text Label 8300 3300 0    50   ~ 0
+SDA
+Text Label 8300 3400 0    50   ~ 0
+SCL
+Text Label 8300 3500 0    50   ~ 0
+3V3
+Text Label 8300 3600 0    50   ~ 0
+GND
+Text Label 8300 3700 0    50   ~ 0
+VAUX2
+Text Label 8300 3800 0    50   ~ 0
+VAUX
+$Comp
+L power:GND #PWR0104
+U 1 1 5BAA2798
+P 3100 4800
+F 0 "#PWR0104" H 3100 4550 50  0001 C CNN
+F 1 "GND" H 3105 4627 50  0000 C CNN
+F 2 "" H 3100 4800 50  0001 C CNN
+F 3 "" H 3100 4800 50  0001 C CNN
+	1    3100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5B67C424
+P 3750 2400
+F 0 "#PWR0101" H 3750 2150 50  0001 C CNN
+F 1 "GND" H 3755 2227 50  0000 C CNN
+F 2 "" H 3750 2400 50  0001 C CNN
+F 3 "" H 3750 2400 50  0001 C CNN
+	1    3750 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5BB0EE30
+P 4250 5900
+F 0 "#PWR0106" H 4250 5650 50  0001 C CNN
+F 1 "GND" H 4255 5727 50  0000 C CNN
+F 2 "" H 4250 5900 50  0001 C CNN
+F 3 "" H 4250 5900 50  0001 C CNN
+	1    4250 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5BD272D7
+P 4700 5100
+F 0 "#PWR0105" H 4700 4850 50  0001 C CNN
+F 1 "GND" H 4705 4927 50  0000 C CNN
+F 2 "" H 4700 5100 50  0001 C CNN
+F 3 "" H 4700 5100 50  0001 C CNN
+	1    4700 5100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 5E772BAF
+P 4700 6100
+F 0 "#PWR0117" H 4700 5850 50  0001 C CNN
+F 1 "GND" H 4705 5927 50  0000 C CNN
+F 2 "" H 4700 6100 50  0001 C CNN
+F 3 "" H 4700 6100 50  0001 C CNN
+	1    4700 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5BEB2B09
+P 6400 4950
+F 0 "#PWR0111" H 6400 4700 50  0001 C CNN
+F 1 "GND" H 6405 4777 50  0000 C CNN
+F 2 "" H 6400 4950 50  0001 C CNN
+F 3 "" H 6400 4950 50  0001 C CNN
+	1    6400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 5D23A338
+P 6450 6000
+F 0 "#PWR0114" H 6450 5750 50  0001 C CNN
+F 1 "GND" H 6455 5827 50  0000 C CNN
+F 2 "" H 6450 6000 50  0001 C CNN
+F 3 "" H 6450 6000 50  0001 C CNN
+	1    6450 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5E8670A2
+P 8100 3850
+F 0 "R8" H 8170 3805 50  0000 L CNN
+F 1 "0" H 8170 3895 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 8030 3850 50  0001 C CNN
+F 3 "~" H 8100 3850 50  0001 C CNN
+	1    8100 3850
+	1    0    0    -1  
+$EndComp
 $Comp
 L Device:C Cc1
 U 1 1 5B653719
-P 1900 2500
-F 0 "Cc1" H 2015 2546 50  0000 L CNN
-F 1 "9pF" H 2015 2455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1938 2350 50  0001 C CNN
-F 3 "~" H 1900 2500 50  0001 C CNN
-	1    1900 2500
+P 3500 2050
+F 0 "Cc1" H 3615 2096 50  0000 L CNN
+F 1 "9pF" H 3615 2005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3538 1900 50  0001 C CNN
+F 3 "~" H 3500 2050 50  0001 C CNN
+	1    3500 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C Cc2
 U 1 1 5B653749
-P 2400 2500
-F 0 "Cc2" H 2515 2546 50  0000 L CNN
-F 1 "9pF" H 2515 2455 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2438 2350 50  0001 C CNN
-F 3 "~" H 2400 2500 50  0001 C CNN
-	1    2400 2500
+P 4000 2050
+F 0 "Cc2" H 4115 2096 50  0000 L CNN
+F 1 "9pF" H 4115 2005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4038 1900 50  0001 C CNN
+F 3 "~" H 4000 2050 50  0001 C CNN
+	1    4000 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Crystal Y1
 U 1 1 5B6537AB
-P 2150 2250
-F 0 "Y1" H 2150 2518 50  0000 C CNN
-F 1 "32.768kHz" H 2150 2427 50  0000 C CNN
-F 2 "Crystal:Crystal_SMD_EuroQuartz_EQ161-2Pin_3.2x1.5mm_HandSoldering" H 2150 2250 50  0001 C CNN
-F 3 "~" H 2150 2250 50  0001 C CNN
-	1    2150 2250
+P 3750 1800
+F 0 "Y1" H 3750 2068 50  0000 C CNN
+F 1 "32.768kHz" H 3750 1977 50  0000 C CNN
+F 2 "Crystal:Crystal_SMD_EuroQuartz_EQ161-2Pin_3.2x1.5mm_HandSoldering" H 3750 1800 50  0001 C CNN
+F 3 "~" H 3750 1800 50  0001 C CNN
+	1    3750 1800
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2300 2250 2400 2250
-Wire Wire Line
-	2000 2250 1900 2250
-Wire Wire Line
-	1900 1900 1900 2250
-Wire Wire Line
-	1900 1900 3200 1900
-Wire Wire Line
-	2400 2000 2400 2250
-Wire Wire Line
-	2400 2000 3200 2000
-Wire Wire Line
-	2400 2250 2400 2350
-Connection ~ 2400 2250
-Wire Wire Line
-	1900 2250 1900 2350
-Connection ~ 1900 2250
-Wire Wire Line
-	1900 2650 1900 2750
-Wire Wire Line
-	1900 2750 2150 2750
-Wire Wire Line
-	2400 2750 2400 2650
-Wire Wire Line
-	2150 2750 2150 2850
-Connection ~ 2150 2750
-Wire Wire Line
-	2150 2750 2400 2750
 $Comp
-L power:GND #PWR0101
-U 1 1 5B67C424
-P 2150 2850
-F 0 "#PWR0101" H 2150 2600 50  0001 C CNN
-F 1 "GND" H 2155 2677 50  0000 C CNN
-F 2 "" H 2150 2850 50  0001 C CNN
-F 3 "" H 2150 2850 50  0001 C CNN
-	1    2150 2850
+L Connector:Conn_01x06_Male J2
+U 1 1 5E7D5B0E
+P 7450 3500
+F 0 "J2" H 7558 3121 50  0000 C CNN
+F 1 "I2C" H 7550 3796 50  0000 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53048-0610_1x06_P1.25mm_Horizontal" H 7450 3500 50  0001 C CNN
+F 3 "~" H 7450 3500 50  0001 C CNN
+	1    7450 3500
 	1    0    0    -1  
 $EndComp
-Text Label 1950 2750 0    50   ~ 0
-GND
-$Sheet
-S 1700 3700 650  500 
-U 5B626331
-F0 "USB" 50
-F1 "USB.sch" 50
-F2 "USB_DP" I R 2350 3900 50 
-F3 "USB_DM" I R 2350 4000 50 
-F4 "USB_ID" I R 2350 4100 50 
-F5 "GND" I L 1700 4100 50 
-F6 "VUSB" I R 2350 3800 50 
-$EndSheet
-Text Label 2700 3900 2    50   ~ 0
-USB_P
-Wire Wire Line
-	2700 3900 2350 3900
-Wire Wire Line
-	2350 3800 2700 3800
-Wire Wire Line
-	2700 4000 2350 4000
-Wire Wire Line
-	2350 4100 2700 4100
-Text Label 2700 4000 2    50   ~ 0
-USB_N
-Text Label 2700 4100 2    50   ~ 0
-USB_ID
-Text Label 2700 3800 2    50   ~ 0
-VUSB
-Wire Wire Line
-	1700 4100 1550 4100
-Wire Wire Line
-	1550 4100 1550 4250
 $Comp
-L power:GND #PWR0104
-U 1 1 5BAA2798
-P 1550 4250
-F 0 "#PWR0104" H 1550 4000 50  0001 C CNN
-F 1 "GND" H 1555 4077 50  0000 C CNN
-F 2 "" H 1550 4250 50  0001 C CNN
-F 3 "" H 1550 4250 50  0001 C CNN
-	1    1550 4250
-	1    0    0    -1  
+L Connector:Conn_01x06_Male J3
+U 1 1 5E85E8FE
+P 8750 3600
+F 0 "J3" H 8858 3221 50  0000 C CNN
+F 1 "I2C" H 8850 3896 50  0000 C CNN
+F 2 "Connector_Molex:Molex_PicoBlade_53048-0610_1x06_P1.25mm_Horizontal" H 8750 3600 50  0001 C CNN
+F 3 "~" H 8750 3600 50  0001 C CNN
+	1    8750 3600
+	-1   0    0    1   
 $EndComp
-Text Label 1450 4900 0    50   ~ 0
-VUSB
-Text Label 2800 4900 2    50   ~ 0
-3V3
 $Comp
-L power:GND #PWR0106
-U 1 1 5BB0EE30
-P 2700 5200
-F 0 "#PWR0106" H 2700 4950 50  0001 C CNN
-F 1 "GND" H 2705 5027 50  0000 C CNN
-F 2 "" H 2700 5200 50  0001 C CNN
-F 3 "" H 2700 5200 50  0001 C CNN
-	1    2700 5200
+L Arduino:SAMD21G U1
+U 1 1 5E7D3BF1
+P 5600 2300
+F 0 "U1" H 5600 3395 50  0000 C CNN
+F 1 "SAMD21G" H 5600 3303 50  0000 C CNN
+F 2 "Package_QFP:TQFP-48_7x7mm_P0.5mm" H 5550 2300 50  0001 C CNN
+F 3 "" H 5550 2300 50  0001 C CNN
+	1    5600 2300
 	1    0    0    -1  
 $EndComp
 $Sheet
-S 3300 3700 900  800 
+S 4950 4300 900  800 
 U 5BD13DD6
 F0 "Communication" 50
 F1 "communication.sch" 50
-F2 "SCK" I L 3300 3900 50 
-F3 "MOSI" I L 3300 4000 50 
-F4 "MISO" I R 4200 3800 50 
-F5 "NSS" I L 3300 4100 50 
-F6 "RESET" I L 3300 4200 50 
-F7 "INT" I L 3300 4300 50 
-F8 "GND" I L 3300 4400 50 
-F9 "3V3" I L 3300 3800 50 
+F2 "SCK" I L 4950 4500 50 
+F3 "MOSI" I L 4950 4600 50 
+F4 "MISO" I R 5850 4400 50 
+F5 "NSS" I L 4950 4700 50 
+F6 "RESET" I L 4950 4800 50 
+F7 "INT" I L 4950 4900 50 
+F8 "GND" I L 4950 5000 50 
+F9 "3V3" I L 4950 4400 50 
 $EndSheet
-Text Label 2950 4200 0    50   ~ 0
-TRX_RST
-Wire Wire Line
-	2950 4200 3300 4200
-Wire Wire Line
-	3300 4100 2950 4100
-Wire Wire Line
-	2950 4000 3300 4000
-Wire Wire Line
-	3300 3900 2950 3900
-Wire Wire Line
-	2950 3800 3300 3800
-Wire Wire Line
-	3300 4300 2950 4300
-Wire Wire Line
-	4200 3800 4450 3800
-Text Label 4450 3800 2    50   ~ 0
-MISO
-Text Label 2950 3800 0    50   ~ 0
-3V3
-Text Label 2950 3900 0    50   ~ 0
-SCK
-Text Label 2950 4000 0    50   ~ 0
-MOSI
-Text Label 2950 4100 0    50   ~ 0
-TRX_NSS
-Text Label 2950 4300 0    50   ~ 0
-TRX_INT
-$Comp
-L power:GND #PWR0105
-U 1 1 5BD272D7
-P 3050 4500
-F 0 "#PWR0105" H 3050 4250 50  0001 C CNN
-F 1 "GND" H 3055 4327 50  0000 C CNN
-F 2 "" H 3050 4500 50  0001 C CNN
-F 3 "" H 3050 4500 50  0001 C CNN
-	1    3050 4500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3300 4400 3050 4400
-Wire Wire Line
-	3050 4400 3050 4500
-Text Label 6100 2300 0    50   ~ 0
-SDA
-Text Label 6100 2400 0    50   ~ 0
-SCL
-Wire Wire Line
-	6300 2300 6100 2300
-Wire Wire Line
-	6100 2400 6300 2400
-Text Label 8550 3300 0    50   ~ 0
-GND
-Wire Wire Line
-	8550 3300 8750 3300
-Text Label 10500 3300 2    50   ~ 0
-GND
-Text Label 10500 3400 2    50   ~ 0
-GND
-Wire Wire Line
-	10500 3300 10300 3300
-Wire Wire Line
-	10300 3400 10500 3400
-Text Label 8050 4300 2    50   ~ 0
-VIN
 $Sheet
-S 5000 3700 750  500 
+S 4950 5400 750  700 
+U 5E86D3FA
+F0 "Data logger" 50
+F1 "data_logger.sch" 50
+F2 "NSS" I L 4950 5800 50 
+F3 "MOSI" I L 4950 5700 50 
+F4 "3V3" I L 4950 5500 50 
+F5 "CD" I L 4950 5900 50 
+F6 "GND" I L 4950 6000 50 
+F7 "SCK" I L 4950 5600 50 
+F8 "MISO" I R 5700 5500 50 
+$EndSheet
+$Sheet
+S 6650 4300 850  650 
 U 5BEF8C81
 F0 "Deploy" 50
 F1 "dpl.sch" 50
-F2 "DPL_EN" I L 5000 4000 50 
-F3 "GND" I L 5000 4100 50 
-F4 "VIN" I L 5000 3800 50 
-F5 "DPL_STA" I R 5750 3800 50 
-F6 "3V3" I L 5000 3900 50 
+F2 "GND" I L 6650 4800 50 
+F3 "VIN" I L 6650 4400 50 
+F4 "3V3" I L 6650 4500 50 
+F5 "DPL_EN1" I L 6650 4600 50 
+F6 "DPL_EN2" I L 6650 4700 50 
+F7 "DPL_STA1" I R 7500 4400 50 
+F8 "DPL_STA2" I R 7500 4500 50 
 $EndSheet
-Text Label 4650 4000 0    50   ~ 0
-DPL_EN
-Text Label 4650 3900 0    50   ~ 0
-3V3
-Wire Wire Line
-	5000 3900 4650 3900
-Wire Wire Line
-	4650 4000 5000 4000
-Text Label 2850 3100 0    50   ~ 0
-DPL_STA
-Text Label 2850 3200 0    50   ~ 0
-DPL_EN
-Text Label 5150 3200 2    50   ~ 0
-TRX_NSS
-Text Label 2850 3400 0    50   ~ 0
-TRX_RST
-Text Label 2850 3300 0    50   ~ 0
-TRX_INT
 $Sheet
-S 5000 4700 800  600 
+S 3250 5400 700  500 
+U 5B6351C6
+F0 "Power" 50
+F1 "power.sch" 50
+F2 "3V3" I R 3950 5600 50 
+F3 "VDDANA" I R 3950 5500 50 
+F4 "VDDCORE" I R 3950 5700 50 
+F5 "GND" I R 3950 5800 50 
+F6 "VUSB" I L 3250 5500 50 
+$EndSheet
+$Sheet
+S 6650 5400 800  600 
 U 5D239B84
 F0 "Programmer" 50
 F1 "programmer.sch" 50
-F2 "3V3" I L 5000 4800 50 
-F3 "SWDIO" I L 5000 4900 50 
-F4 "SWCLK" I L 5000 5000 50 
-F5 "RESET" I L 5000 5100 50 
-F6 "GND" I L 5000 5200 50 
+F2 "3V3" I L 6650 5500 50 
+F3 "SWDIO" I L 6650 5600 50 
+F4 "SWCLK" I L 6650 5700 50 
+F5 "RESET" I L 6650 5800 50 
+F6 "GND" I L 6650 5900 50 
 $EndSheet
-Text Label 4700 5100 0    50   ~ 0
-RESET
-Text Label 4700 4800 0    50   ~ 0
-3V3
-Text Label 4700 4900 0    50   ~ 0
-SWDIO
-Text Label 4700 5000 0    50   ~ 0
-SWCLK
-$Comp
-L power:GND #PWR0114
-U 1 1 5D23A338
-P 4800 5350
-F 0 "#PWR0114" H 4800 5100 50  0001 C CNN
-F 1 "GND" H 4805 5177 50  0000 C CNN
-F 2 "" H 4800 5350 50  0001 C CNN
-F 3 "" H 4800 5350 50  0001 C CNN
-	1    4800 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4800 5200 4800 5350
-Wire Wire Line
-	4700 5000 5000 5000
-Wire Wire Line
-	4700 5100 5000 5100
-Wire Wire Line
-	5000 4900 4700 4900
-Wire Wire Line
-	4700 4800 5000 4800
-$Comp
-L Payload:Payload U0
-U 1 1 5D23A5F6
-P 8300 3100
-F 0 "U0" H 8300 4648 50  0000 C CNN
-F 1 "Payload" H 8300 4557 50  0000 C CNN
-F 2 "Payload:FOD" H 7200 3900 50  0001 C CNN
-F 3 "" H 7200 3900 50  0001 C CNN
-	1    8300 3100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 4250 4750 4100
-Text Label 4650 3800 0    50   ~ 0
-VIN
-Wire Wire Line
-	4650 3800 5000 3800
-Text Label 6100 3800 2    50   ~ 0
-DPL_STA
-Wire Wire Line
-	6100 3800 5750 3800
-Wire Wire Line
-	7850 4300 8050 4300
-$Comp
-L Arduino:SAMD21E U1
-U 1 1 5D23A4C1
-P 4000 2650
-F 0 "U1" H 4000 3665 50  0000 C CNN
-F 1 "SAMD21E" H 4000 3574 50  0000 C CNN
-F 2 "Package_QFP:TQFP-32_7x7mm_P0.8mm" H 4000 2550 50  0001 C CNN
-F 3 "" H 4000 2550 50  0001 C CNN
-	1    4000 2650
-	1    0    0    -1  
-$EndComp
-Text Label 5150 2300 2    50   ~ 0
-GND
-NoConn ~ 3200 2100
-NoConn ~ 3200 2200
-NoConn ~ 3200 2300
-NoConn ~ 3200 2400
-NoConn ~ 3200 2500
-NoConn ~ 3200 2600
-NoConn ~ 3200 2900
-NoConn ~ 3200 3000
-NoConn ~ 4800 2600
-Text Label 1450 4800 0    50   ~ 0
-VIN
-Wire Wire Line
-	1450 4800 1700 4800
-Wire Wire Line
-	1700 4900 1450 4900
-Wire Wire Line
-	2700 5100 2700 5200
-Wire Wire Line
-	2400 5100 2700 5100
-$Comp
-L power:GND #PWR0111
-U 1 1 5BEB2B09
-P 4750 4250
-F 0 "#PWR0111" H 4750 4000 50  0001 C CNN
-F 1 "GND" H 4755 4077 50  0000 C CNN
-F 2 "" H 4750 4250 50  0001 C CNN
-F 3 "" H 4750 4250 50  0001 C CNN
-	1    4750 4250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4750 4100 5000 4100
-Wire Wire Line
-	5000 5200 4800 5200
+$Sheet
+S 3250 4300 650  500 
+U 5B626331
+F0 "USB" 50
+F1 "USB.sch" 50
+F2 "USB_DP" I R 3900 4500 50 
+F3 "USB_DM" I R 3900 4600 50 
+F4 "USB_ID" I R 3900 4700 50 
+F5 "GND" I L 3250 4700 50 
+F6 "VUSB" I R 3900 4400 50 
+$EndSheet
 $EndSCHEMATC
