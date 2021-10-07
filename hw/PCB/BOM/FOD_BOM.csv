@@ -1,0 +1,24 @@
+Comment,Designator,Footprint,JLCPCB Part #
+"10uF 0603, C1608X5R0J106K080AE","C2a1, C3a1, Ct2",Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,C267437
+"100nF 0603, 06036C104JAT2A","C2b1, C3b1, C5, C7, Ct1",Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,
+"1uF 0603, C0603X105J9RACAUTO","C4, Cr1, Cr2",Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,
+"4.7nF 0603, C0603C472K9RACTU",C6,Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,
+"9pF 0603, 06033A9R0CAT2A","Cc1, Cc2",Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder,
+"PRTR5V0U2X,215",D1,Package_TO_SOT_SMD:SOT-143,C12333
+Green LED 0805,D2,Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder,C397047
+"USB_B_Micro, ZX62-AB-5PA(31)",J1,Connector_USB:USB_Micro-B_Molex_47346-0001,C2692071
+"Molex PicoBlade SMD 1x12, 53398-1271",J2,Connector_Molex:Molex_PicoBlade_53398-1271_1x12-1MP_P1.25mm_Vertical,
+Pin header 1x2,J3,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,
+"Molex PicoBlade SMD 1x6, 53398-0671",J4,Connector_Molex:Molex_PicoBlade_53398-0671_1x06-1MP_P1.25mm_Vertical,
+Jumper,"JP1, JP2, JP3",Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,
+"Ferrite_Bead, MPZ2012S221AT000",L1,Inductor_SMD:L_0805_2012Metric_Pad1.15x1.40mm_HandSolder, C76818 
+PMV16XNR,Q1,Package_TO_SOT_SMD:SOT-23,C110920
+"1k 0603, RC0603FR-071KL","R1, R7",Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,
+"10k 0603, ESR03EZPF1002",R2,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,C253330
+"1M 0603, ESR03EZPF1004",R3,Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,C253332
+"330, CRGH0603F330R","R4, R6",Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder,
+Reset_push,SW1,Button_Switch_THT:SW_TH_Tactile_Omron_B3F-10xx,C231317
+ATSAMD21G18A-AFT,U1,Package_QFP:TQFP-48_7x7mm_P0.5mm,C78624
+AP7215-33YG-13,U2,Package_TO_SOT_SMD:SOT-89-3,C460367
+AV4524,U4,Interrupt:AV4524,
+"32.768kHz, ECS-.327-9-34QCS-TR",Y1,Crystal:Crystal_SMD_EuroQuartz_EQ161-2Pin_3.2x1.5mm_HandSoldering,

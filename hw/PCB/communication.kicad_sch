@@ -1,6 +1,6 @@
 (kicad_sch (version 20200512) (host eeschema "5.99.0-unknown-57e35c9~88~ubuntu19.10.1")
 
-  (page 4 7)
+  (page 1 6)
 
   (paper "A4")
 
@@ -58,7 +58,7 @@
       (property "Footprint" "" (id 2) (at 0.9652 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "~" (id 3) (at 0 0 0)
+      (property "Datasheet" "" (id 3) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "cap capacitor" (id 4) (at 0 0 0)
@@ -101,7 +101,7 @@
       (property "Footprint" "" (id 2) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "~" (id 3) (at 0 0 0)
+      (property "Datasheet" "" (id 3) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_keywords" "R resistor" (id 4) (at 0 0 0)
